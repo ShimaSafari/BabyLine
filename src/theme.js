@@ -23,7 +23,7 @@ const myTheme = createTheme({
     fontWeightMedium: 700,
     fontWeightBold: 800,
     h1: {
-      fontSize: 64,
+      fontSize: 50,
       fontStyle: "normal",
       fontWeight: 700,
       lineHeight: "normal",
