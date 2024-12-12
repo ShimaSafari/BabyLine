@@ -10,10 +10,12 @@ const Navbar = () => {
     // Grid for main container
     <Grid
       sx={{
+        width:"100wvw",
         position: "sticky",
         top: 0,
         zIndex: "999",
         backgroundColor: "background.default",
+        border:"none",
       }}
     >
       {/* navbar paper bgcolor  that has 3 section Grid*/}
