@@ -1,12 +1,14 @@
-import React from 'react'
-import Hero from '../components/Hero'
+import React from "react";
+import Hero from "../components/Hero";
+import HeroGroup from "../components/HeroGroup";
 
 const Home = () => {
   return (
     <>
-    <Hero/>
+      <Hero />
+      <HeroGroup/>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
