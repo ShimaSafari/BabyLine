@@ -22,6 +22,7 @@ const Navbar = () => {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+  // UI for Drawer Menu in small screen
   const DrawerList = (
     <Box
       sx={{
@@ -38,7 +39,9 @@ const Navbar = () => {
       role="presentation"
       onClick={toggleDrawer(false)}
     >
+      {/* List = ul */}
       <List>
+        {/* ListItem = ul , navlink or a is inside, display=block for better UI */}
         <ListItem sx={{ display: "block" }}>
           <NavLink to={"/"}>
             <ListItemButton>
@@ -184,6 +187,7 @@ const Navbar = () => {
           spacing={4}
           sx={{ display: { xs: "flex", md: "none" } }}
         >
+          {/* button or menu icon to open drawer menu */}
           <Button onClick={toggleDrawer(true)}>
             <MenuIcon sx={{ color: "primary.main", width: "40px" }} />
           </Button>
