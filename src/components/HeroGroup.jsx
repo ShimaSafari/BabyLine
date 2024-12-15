@@ -1,7 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid2";
-import ToddlerShop from "/src/assets/images/GroupToddlerShop.svg";
-import BabyShop from "/src/assets/images/GroupBabyShop.svg";
+import { Data } from "/src/assets/DataAssets";
 
 const HeroGroup = () => {
   return (
@@ -21,7 +20,7 @@ const HeroGroup = () => {
         sx={{ display: "flex", justifyContent: { md: "start", xs: "center" } }}
       >
         <img
-          src={ToddlerShop}
+          src={Data.ToddlerShop}
           alt="Toddler Shop"
           style={{
             width: "100%",
@@ -35,7 +34,7 @@ const HeroGroup = () => {
         sx={{ display: "flex", justifyContent: { md: "end", xs: "center" } }}
       >
         <img
-          src={BabyShop}
+          src={Data.BabyShop}
           alt="Baby Shop"
           style={{
             width: "100%",

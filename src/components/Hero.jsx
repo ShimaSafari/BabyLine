@@ -1,6 +1,5 @@
 import React from "react";
-import Herobg from "/src/assets/images/Bg-main.svg";
-import Bgline from "/src/assets/images/hero-bgline.png";
+import { Data } from "/src/assets/DataAssets";
 import Grid from "@mui/material/Grid2";
 import { Typography } from "@mui/material";
 
@@ -12,7 +11,7 @@ const Hero = () => {
         width: "100%",
         paddingX: { md: "70px", sm: "10px" },
         // height:"730px",
-        backgroundImage: `url(${Bgline})`,
+        backgroundImage: `url(${Data.Bgline})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -23,7 +22,7 @@ const Hero = () => {
         sx={{
           width: "100%",
           height: "660px",
-          backgroundImage: `url(${Herobg})`,
+          backgroundImage: `url(${Data.Herobg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { Typography, Box } from "@mui/material";
+import { NavLink } from "react-router-dom";
 import Grid from "@mui/material/Grid2";
 import SearchIcon from "../assets/icons/SearchIcon";
 import UserIcon from "../assets/icons/UserIcon";
@@ -70,26 +70,26 @@ const Navbar = () => {
           sx={{ display: { xs: "none", lg: "flex" } }}
         >
           <Box component="ul" sx={{ display: "flex", gap: "30px" }}>
-            <Link to={"/"}>
+            <NavLink to={"/"}>
               <Typography component="li" variant="h4">
                 Home
               </Typography>
-            </Link>
-            <Link to={"/store"}>
+            </NavLink>
+            <NavLink to={"/store"}>
               <Typography component="li" variant="h4">
                 Store
               </Typography>
-            </Link>
-            <Link to={"/"}>
+            </NavLink>
+            <NavLink to={"/about"}>
               <Typography component="li" variant="h4">
                 About
               </Typography>
-            </Link>
-            <Link to={"/"}>
+            </NavLink>
+            <NavLink to={"/contact"}>
               <Typography component="li" variant="h4">
                 Contact
               </Typography>
-            </Link>
+            </NavLink>
           </Box>
         </Grid>
         {/* 3- section Grid for icons */}
