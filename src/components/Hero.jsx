@@ -77,7 +77,7 @@ const Hero = () => {
               width: "400px",
               display: "flex",
               justifyContent: "space-between",
-              flexDirection: { xs: "column", md: "row" },
+              flexDirection: { xs: "column", lg: "row" },
               alignContent: "center",
               rowGap: 5,
             }}

@@ -1,21 +1,95 @@
-import { Typography, Box } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import {
+  Typography,
+  Box,
+  Drawer,
+  Button,
+  List,
+  Divider,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import SearchIcon from "../assets/icons/SearchIcon";
 import UserIcon from "../assets/icons/UserIcon";
 import CartIcon from "../assets/icons/CartIcon";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+  const DrawerList = (
+    <Box
+      sx={{
+        width: 250,
+        marginTop: 2,
+        "& .MuiTypography-root": {
+          fontSize: "20px",
+
+          "&:hover": {
+            color: "primary.main",
+          },
+        },
+      }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+    >
+      <List>
+        <ListItem sx={{ display: "block" }}>
+          <NavLink to={"/"}>
+            <ListItemButton>
+              <ListItemText primary={"Home"} />
+            </ListItemButton>
+          </NavLink>
+        </ListItem>
+        <ListItem sx={{ display: "block" }}>
+          <NavLink to={"/store"}>
+            <ListItemButton>
+              <ListItemText primary={"Store"} />
+            </ListItemButton>
+          </NavLink>
+        </ListItem>
+        <ListItem sx={{ display: "block" }}>
+          <NavLink to={"/about"}>
+            <ListItemButton>
+              <ListItemText primary={"About"} />
+            </ListItemButton>
+          </NavLink>
+        </ListItem>
+        <ListItem sx={{ display: "block" }}>
+          <NavLink to={"/contact"}>
+            <ListItemButton>
+              <ListItemText primary={"Contact"} />
+            </ListItemButton>
+          </NavLink>
+        </ListItem>
+      </List>
+      <Divider />
+      <List>
+        <ListItem sx={{ display: "block" }}>
+          <NavLink to={"/cart"}>
+            <ListItemButton>
+              <ListItemText primary="Cart" />
+            </ListItemButton>
+          </NavLink>
+        </ListItem>
+      </List>
+    </Box>
+  );
   return (
     // Grid for main container
     <Grid
       sx={{
-        width:"100wvw",
+        width: "100vw",
         position: "sticky",
         top: 0,
         zIndex: "999",
         backgroundColor: "background.default",
-        border:"none",
+        border: "none",
       }}
     >
       {/* navbar paper bgcolor  that has 3 section Grid*/}
@@ -23,11 +97,11 @@ const Navbar = () => {
         component="header"
         sx={{
           height: "100px",
-          marginTop: {sm:"10px",md:"20px"},
+          marginTop: { sm: "10px", md: "20px" },
           marginBottom: "40px",
           marginX: { md: "70px", sm: "10px" },
           paddingX: { md: "60px", xs: "20px" },
-          borderRadius: {sm:"30px"},
+          borderRadius: { sm: "30px" },
           backgroundColor: "background.paper",
           display: "flex",
           flexWrap: "wrap",
@@ -110,7 +184,12 @@ const Navbar = () => {
           spacing={4}
           sx={{ display: { xs: "flex", md: "none" } }}
         >
-          <MenuIcon sx={{ color: "primary.main", width: "40px" }} />
+          <Button onClick={toggleDrawer(true)}>
+            <MenuIcon sx={{ color: "primary.main", width: "40px" }} />
+          </Button>
+          <Drawer open={open} onClose={toggleDrawer(false)}>
+            {DrawerList}
+          </Drawer>
         </Grid>
       </Grid>
     </Grid>
