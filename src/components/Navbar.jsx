@@ -87,7 +87,7 @@ const Navbar = () => {
     // Grid for main container
     <Grid
       sx={{
-        width: "100vw",
+        width: "100%",
         position: "sticky",
         top: 0,
         zIndex: "999",

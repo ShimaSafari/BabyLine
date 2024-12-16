@@ -1,9 +1,11 @@
 // img Home Page
-import Bgline from "./images/hero-bgline.png";
+import Bgline from "./images/Bg-lineHero.png";
 import Herobg from "./images/Bg-main.svg";
 import ToddlerShop from "./images/GroupToddlerShop.svg";
 import BabyShop from "./images/GroupBabyShop.svg";
-
+import Left from "./images/i_left.png";
+import Right from "./images/i_right.png";
+import Bgline_popular from "./images/Bg-popularproduct.png"
 // img products
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
@@ -21,6 +23,9 @@ export const Data = {
   p_SleevyShirt,
   p_PlushTeddy,
   p_CareCarry,
+  Left,
+  Right,
+  Bgline_popular
 };
 
 export const Products = [

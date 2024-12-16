@@ -28,12 +28,19 @@ const myTheme = createTheme({
       fontWeight: 700,
       lineHeight: "normal",
     },
-    h4:{
+    h4: {
       fontSize: "24px",
       fontStyle: "bold",
       fontWeight: 700,
       lineHeight: "normal",
-    }
+    },
+    body1: {
+      color: "#000",
+      fontSize: "24px",
+      fontStyle: "normal",
+      fontWeight: 800,
+      lineHeight: "normal",
+    },
   },
 });
 export default myTheme;
