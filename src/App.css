@@ -1,17 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap");
+body {
   padding: 0;
   margin: 0;
   background-color: #f8eeee;
 }
-ul, li {
+ul,
+li {
   list-style-type: none;
   font-size: 26px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
-a{
+a {
   text-decoration: none;
   color: #000;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  /* color: #000; */
+  /* content: ""; */
+  display: none;
+  
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: initial !important;
+  height: initial;
+  position: relative;
+}
+/* .swiper-button-prev {
+  left: 40%;
+}
+.swiper-button-next {
+  right: 0;
+} */
+.swiper-pagination-bullet-active{
+  background: #000 !important;
+
 }

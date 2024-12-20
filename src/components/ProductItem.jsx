@@ -11,12 +11,12 @@ import Grid from "@mui/material/Grid2";
 const ProductItem = ({ id, image, name, price }) => {
   const { currency } = useContext(ShopContext);
   return (
-    <Grid container size={2}>
+    <Grid container>
       <Card
       
         sx={{
           width: "210px",
-          height: "666px",
+          // height: "666px",
           backgroundColor: "transparent",
           boxShadow: 0,
         //   margin: 10,
