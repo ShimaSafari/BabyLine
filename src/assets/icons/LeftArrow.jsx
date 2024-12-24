@@ -1,8 +1,11 @@
 import React from "react";
 import { SvgIcon } from "@mui/material";
-const LeftArrow = () => {
+const LeftArrow = (props) => {
+  const { className, style, onClick } = props;
   return (
-    <SvgIcon>
+    <SvgIcon className={className}
+    style={{ ...style, display: "block" , zIndex:10}}
+    onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"

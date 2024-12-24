@@ -11,7 +11,7 @@ import Grid from "@mui/material/Grid2";
 const ProductItem = ({ id, image, name, price }) => {
   const { currency } = useContext(ShopContext);
   return (
-    <Grid container>
+    <Grid container sx={{justifyContent:"center"}}>
       <Card
       
         sx={{
