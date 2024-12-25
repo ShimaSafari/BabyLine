@@ -8,7 +8,8 @@ const Title = ({ text }) => {
         display: "flex",
         gap: "22px",
         justifyContent: "center",
-        marginY: "85px",
+        marginTop: "85px",
+        marginBottom: "55px",
       }}
     >
       <Box>

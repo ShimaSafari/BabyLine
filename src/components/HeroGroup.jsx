@@ -9,7 +9,7 @@ const HeroGroup = () => {
       spacing={4}
       sx={{
         marginTop: "50px",
-        marginX: "100px",
+        marginX: {md:"100px", xs:"10px"},
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",

@@ -5,7 +5,12 @@ import ToddlerShop from "./images/GroupToddlerShop.svg";
 import BabyShop from "./images/GroupBabyShop.svg";
 import Left from "./images/i_left.png";
 import Right from "./images/i_right.png";
-import Bgline_popular from "./images/Bg-popularproduct.png"
+import Bgline_popular from "./images/Bg-popularproduct.png";
+import Bg_Offers from "./images/Bg_Offers.png";
+import Group_offer1 from "./images/Group_offer1.svg";
+import Group_offer2 from "./images/Group_offer2.svg";
+import Group_offer3 from "./images/Group_offer3.svg";
+import mouse from "./images/i_mouse.png";
 // img products
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
@@ -25,7 +30,12 @@ export const Data = {
   p_CareCarry,
   Left,
   Right,
-  Bgline_popular
+  Bgline_popular,
+  Bg_Offers,
+  Group_offer1,
+  Group_offer2,
+  Group_offer3,
+  mouse,
 };
 
 export const Products = [

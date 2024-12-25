@@ -64,7 +64,7 @@ const PopularProducts = () => {
     <Grid
       sx={{
         width: "100%",
-        height: "745px",
+        height: "670px",
         backgroundImage: `url(${Data.Bgline_popular})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
