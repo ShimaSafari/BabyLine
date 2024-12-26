@@ -41,6 +41,14 @@ const myTheme = createTheme({
       fontWeight: 800,
       lineHeight: "normal",
     },
+    body2: {
+      color: "#000",
+      opacity: 0.75,
+      fontSize: "20px",
+      fontStyle: "normal",
+      fontWeight: 700,
+      lineHeight: "normal",
+    },
   },
 });
 export default myTheme;

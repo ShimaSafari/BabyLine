@@ -1,16 +1,32 @@
 // img Home Page
+// img in Hero Component
 import Bgline from "./images/Bg-lineHero.png";
 import Herobg from "./images/Bg-main.svg";
+// img in HeroGroup Component
 import ToddlerShop from "./images/GroupToddlerShop.svg";
 import BabyShop from "./images/GroupBabyShop.svg";
+// img in Title Component
 import Left from "./images/i_left.png";
 import Right from "./images/i_right.png";
+// img in PopularProducts Component
 import Bgline_popular from "./images/Bg-popularproduct.png";
+// img in Offers Component
 import Bg_Offers from "./images/Bg_Offers.png";
 import Group_offer1 from "./images/Group_offer1.svg";
 import Group_offer2 from "./images/Group_offer2.svg";
 import Group_offer3 from "./images/Group_offer3.svg";
 import mouse from "./images/i_mouse.png";
+// img in Footer Component
+import Bg_Footer from "./images/Bg_Footerdash.png"
+import Footer_brand1 from "./images/Footer_brand1.svg"
+import Footer_brand2 from "./images/Footer_brand2.svg"
+import Footer_brand3 from "./images/Footer_brand3.svg"
+import Footer_brand4 from "./images/Footer_brand4.svg"
+import Footer_pay1 from "./images/Footer_pay1.svg"
+import Footer_pay2 from "./images/Footer_pay2.svg"
+import Footer_pay3 from "./images/Footer_pay3.svg"
+import Footer_pay4 from "./images/Footer_pay4.svg"
+import i_Dot from "./images/i_DotMenu.png"
 // img products
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
@@ -36,6 +52,16 @@ export const Data = {
   Group_offer2,
   Group_offer3,
   mouse,
+  Bg_Footer,
+  Footer_brand1,
+  Footer_brand2,
+  Footer_brand3,
+  Footer_brand4,
+  Footer_pay1,
+  Footer_pay2,
+  Footer_pay3,
+  Footer_pay4,
+  i_Dot
 };
 
 export const Products = [

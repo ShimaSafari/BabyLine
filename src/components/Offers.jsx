@@ -9,7 +9,7 @@ const Offers = () => {
       {/*  Grid for flower Bg */}
       <Grid
         sx={{
-          height: "600px",
+          // height: "600px",
           marginX: { md: "70px", xs: "10px" },
           backgroundImage: `url(${Data.Bg_Offers})`,
           backgroundSize: { md: "contain", xs: "cover" },
