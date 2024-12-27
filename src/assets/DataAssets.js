@@ -27,6 +27,11 @@ import Footer_pay2 from "./images/Footer_pay2.svg"
 import Footer_pay3 from "./images/Footer_pay3.svg"
 import Footer_pay4 from "./images/Footer_pay4.svg"
 import i_Dot from "./images/i_DotMenu.png"
+// img in About Page
+// img in AboutHero components
+import Bg_About_Hero from "./images/Bg_About_Hero.png"
+import About_Hero from "./images/About_Hero.png"
+import i_Line_Black from "./images/i_Line_Black.svg"
 // img products
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
@@ -61,7 +66,10 @@ export const Data = {
   Footer_pay2,
   Footer_pay3,
   Footer_pay4,
-  i_Dot
+  i_Dot,
+  Bg_About_Hero,
+  About_Hero,
+  i_Line_Black
 };
 
 export const Products = [

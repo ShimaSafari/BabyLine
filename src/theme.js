@@ -29,14 +29,14 @@ const myTheme = createTheme({
       lineHeight: "normal",
     },
     h4: {
-      fontSize: "24px",
+      fontSize: 26,
       fontStyle: "bold",
       fontWeight: 700,
       lineHeight: "normal",
     },
     body1: {
       color: "#000",
-      fontSize: "24px",
+      fontSize: 24,
       fontStyle: "normal",
       fontWeight: 800,
       lineHeight: "normal",
@@ -44,7 +44,7 @@ const myTheme = createTheme({
     body2: {
       color: "#000",
       opacity: 0.75,
-      fontSize: "20px",
+      fontSize: 20,
       fontStyle: "normal",
       fontWeight: 700,
       lineHeight: "normal",
