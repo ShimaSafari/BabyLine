@@ -115,7 +115,11 @@ const AboutHero = () => {
             >
               <Typography
                 variant="h1"
-                sx={{ fontWeight: 800, fontSize: { md: 30, lg: 50 } }}
+                sx={{
+                  fontWeight: 800,
+                  fontSize: { xs: 35, sm: 35, lg: 50 },
+                  paddingBottom: 4,
+                }}
               >
                 “ Happy, healthy{" "}
                 <Typography
@@ -124,7 +128,7 @@ const AboutHero = () => {
                   sx={{
                     color: "common.main",
                     fontWeight: 800,
-                    fontSize: { md: 30, lg: 50 },
+                    fontSize: { xs: 35, sm: 35, lg: 50 },
                   }}
                 >
                   Babies

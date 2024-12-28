@@ -17,21 +17,27 @@ import Group_offer2 from "./images/Group_offer2.svg";
 import Group_offer3 from "./images/Group_offer3.svg";
 import mouse from "./images/i_mouse.png";
 // img in Footer Component
-import Bg_Footer from "./images/Bg_Footerdash.png"
-import Footer_brand1 from "./images/Footer_brand1.svg"
-import Footer_brand2 from "./images/Footer_brand2.svg"
-import Footer_brand3 from "./images/Footer_brand3.svg"
-import Footer_brand4 from "./images/Footer_brand4.svg"
-import Footer_pay1 from "./images/Footer_pay1.svg"
-import Footer_pay2 from "./images/Footer_pay2.svg"
-import Footer_pay3 from "./images/Footer_pay3.svg"
-import Footer_pay4 from "./images/Footer_pay4.svg"
-import i_Dot from "./images/i_DotMenu.png"
+import Bg_Footer from "./images/Bg_Footerdash.png";
+import Footer_brand1 from "./images/Footer_brand1.svg";
+import Footer_brand2 from "./images/Footer_brand2.svg";
+import Footer_brand3 from "./images/Footer_brand3.svg";
+import Footer_brand4 from "./images/Footer_brand4.svg";
+import Footer_pay1 from "./images/Footer_pay1.svg";
+import Footer_pay2 from "./images/Footer_pay2.svg";
+import Footer_pay3 from "./images/Footer_pay3.svg";
+import Footer_pay4 from "./images/Footer_pay4.svg";
+import i_Dot from "./images/i_DotMenu.png";
 // img in About Page
 // img in AboutHero components
-import Bg_About_Hero from "./images/Bg_About_Hero.png"
-import About_Hero from "./images/About_Hero.png"
-import i_Line_Black from "./images/i_Line_Black.svg"
+import Bg_About_Hero from "./images/Bg_About_Hero.png";
+import About_Hero from "./images/About_Hero.png";
+import i_Line_Black from "./images/i_Line_Black.svg";
+import Bg_About_category from "./images/Bg_About_category.png";
+import About_category1 from "./images/About_category1.svg";
+import About_category2 from "./images/About_category2.svg";
+import About_category3 from "./images/About_category3.svg";
+import About_category4 from "./images/About_category4.svg";
+import About_category5 from "./images/About_category5.svg";
 // img products
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
@@ -69,7 +75,13 @@ export const Data = {
   i_Dot,
   Bg_About_Hero,
   About_Hero,
-  i_Line_Black
+  i_Line_Black,
+  Bg_About_category,
+  About_category1,
+  About_category2,
+  About_category3,
+  About_category4,
+  About_category5,
 };
 
 export const Products = [
