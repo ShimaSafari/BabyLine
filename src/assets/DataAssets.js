@@ -32,12 +32,17 @@ import i_Dot from "./images/i_DotMenu.png";
 import Bg_About_Hero from "./images/Bg_About_Hero.png";
 import About_Hero from "./images/About_Hero.png";
 import i_Line_Black from "./images/i_Line_Black.svg";
+// img in AboutCategory components
 import Bg_About_category from "./images/Bg_About_category.png";
 import About_category1 from "./images/About_category1.svg";
 import About_category2 from "./images/About_category2.svg";
 import About_category3 from "./images/About_category3.svg";
 import About_category4 from "./images/About_category4.svg";
 import About_category5 from "./images/About_category5.svg";
+// img in AboutInfo components
+import About_info1 from "./images/About_info1.png";
+import About_info2 from "./images/About_info2.png";
+
 // img products
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
@@ -82,6 +87,8 @@ export const Data = {
   About_category3,
   About_category4,
   About_category5,
+  About_info1,
+  About_info2,
 };
 
 export const Products = [
