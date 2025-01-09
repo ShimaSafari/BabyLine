@@ -137,7 +137,7 @@ const AboutHero = () => {
               </Typography>
               <Box>
                 <Typography sx={{ color: "#09168A", fontSize: 25 }}>
-                  Mohammed Jaseem
+                  S . S
                 </Typography>
                 <Typography variant="h4">Ceo, ninibits</Typography>
               </Box>
