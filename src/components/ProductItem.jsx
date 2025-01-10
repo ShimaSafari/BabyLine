@@ -5,21 +5,24 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { Data } from "../assets/DataAssets";
 import { Box, Typography, Button } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-const ProductItem = ({ id, image, name, price }) => {
+const ProductItem = ({
+  id,
+  image,
+  name,
+  price,
+  discountPrice,
+  discountPercent,
+}) => {
   const { currency } = useContext(ShopContext);
   return (
-    <Grid container sx={{justifyContent:"center"}}>
+    <Grid container sx={{ justifyContent: "center" }}>
       <Card
-      
         sx={{
           width: "210px",
-          // height: "666px",
           backgroundColor: "transparent",
           boxShadow: 0,
-        //   margin: 10,
           textAlign: "center",
         }}
       >
@@ -32,16 +35,44 @@ const ProductItem = ({ id, image, name, price }) => {
             borderColor: "primary.main",
             borderRadius: "34px",
             overflow: "hidden",
+            position: "relative",
           }}
         >
+          <Box sx={{ display: "flex" }}>
+            <Typography
+              component="span"
+              sx={{
+                backgroundColor: "#DBBCBA",
+                color: "#fff",
+                fontSize: "13px",
+                display: "flex-inline",
+                borderRadius: "30px",
+                paddingX: "10px",
+                paddingY: "4px",
+                marginLeft: "15px",
+                marginTop: "12px",
+                zIndex: 10,
+              }}
+            >
+              Sale {discountPercent}%
+            </Typography>
+          </Box>
           <Link to={`/product/${id}`}>
             <CardMedia
-              sx={{ height: "100%", width: "100%" , backgroundPosition:"center"}}
+              sx={{
+                height: "90%",
+                width: "100%",
+                backgroundPosition: "center",
+                backgroundSize: "contain",
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+              }}
               image={image[0]}
             />
           </Link>
         </Box>
-        <CardContent>
+        <CardContent sx={{ paddingX: 0 }}>
           <Typography variant="body1">{name}</Typography>
         </CardContent>
         <CardContent
@@ -55,9 +86,13 @@ const ProductItem = ({ id, image, name, price }) => {
             variant="body1"
             sx={{ color: "#00000080", textDecorationLine: "line-through" }}
           >
-            {currency}{price}
+            {currency}
+            {price}
           </Typography>
-          <Typography variant="body1">{currency}{price}</Typography>
+          <Typography variant="body1">
+            {currency}
+            {discountPrice}
+          </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: "center", paddingTop: 0 }}>
           <Button

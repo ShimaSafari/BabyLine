@@ -85,6 +85,8 @@ const PopularProducts = () => {
               image={item.image}
               name={item.name}
               price={item.price}
+              discountPrice={item.discountPrice}
+              discountPercent={item.discountPercent}
             />
           ))}
         </Slider>
