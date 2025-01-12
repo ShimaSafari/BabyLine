@@ -15,7 +15,7 @@ const StoreAllProducts = () => {
     // Grid Container for 8 col bg white
     <Grid
       container
-      size={8}
+      size={{ xs: 12, md: 7.5 }}
       sx={{
         backgroundColor: "#FFFCF9",
         borderRadius: "50px",
@@ -61,20 +61,20 @@ const StoreAllProducts = () => {
         </Grid>
       </Grid>
       <Grid
+        className="grid-scroll"
         container
-        size={11.7}
+        size={11.8}
         rowSpacing={5}
         sx={{
           maxHeight: "1200px",
           overflow: "auto",
-          scrollbarWidth: "thin",
           marginBottom: "40px",
         }}
       >
         {PopularProducts.map((item, index) => (
           <Grid
             container
-            size={{ lg: 4, md: 6, xs: 12 }}
+            size={{ lg: 4, md: 6, sm: 6, xs: 12 }}
             sx={{
               flexDirection: "row",
               justifyContent: "center",

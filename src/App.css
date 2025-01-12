@@ -16,3 +16,7 @@ a {
   text-decoration: none;
   color: #000;
 }
+.grid-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #ff961a #fffcf9;
+}

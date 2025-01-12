@@ -43,9 +43,11 @@ import About_category5 from "./images/About_category5.svg";
 // img in AboutInfo components
 import About_info1 from "./images/About_info1.png";
 import About_info2 from "./images/About_info2.png";
-// img in Conatct Page
+// img in Contact Page
 import i_Line_Orange from "./images/i_Line_orange.svg";
-// img products
+// img in Store Page
+import i_searchicon from "./images/i_searchicon.svg";
+//--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
 import p_SleevyShirt from "./images/p_SleevyShirt.png";
@@ -110,6 +112,7 @@ export const Data = {
   p_FullSleevTshirt,
   p_EasterBunny,
   p_BabySeatS2,
+  i_searchicon,
 };
 
 export const Products = [
