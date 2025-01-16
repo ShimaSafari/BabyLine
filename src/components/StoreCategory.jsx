@@ -163,7 +163,7 @@ const StoreCategory = () => {
         <Box
           sx={{
             width: "180px",
-            display: "flex",
+            display: { xs: "flex", md: "none", lg: "flex" },
             justifyContent: "center",
           }}
         >

@@ -48,9 +48,7 @@ import i_Line_Orange from "./images/i_Line_orange.svg";
 // img in Store Page
 import i_searchicon from "./images/i_searchicon.svg";
 import i_off50 from "./images/i_off50.png";
-import Bg_StoreOff from "./images/Bg_StoreOff.png";
-import Bg_StoreOff_Box from "./images/Bg_StoreOff_Box.svg";
-import Bg_Store_sun from "./images/Bg_Store_sun.png";
+import Store_Banner from "./images/Store_Banner.png"
 
 //--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
@@ -119,9 +117,7 @@ export const Data = {
   p_BabySeatS2,
   i_searchicon,
   i_off50,
-  Bg_StoreOff,
-  Bg_StoreOff_Box,
-  Bg_Store_sun,
+  Store_Banner
 };
 
 export const Products = [

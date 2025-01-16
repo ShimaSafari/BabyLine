@@ -3,7 +3,7 @@ import StoreAllProducts from "../components/StoreAllProducts";
 import Grid from "@mui/material/Grid2";
 import SearchProducts from "../components/SearchProducts";
 import StoreCategory from "../components/StoreCategory";
-
+import { Data } from "../assets/DataAssets";
 const Store = () => {
   return (
     <Grid
@@ -24,6 +24,18 @@ const Store = () => {
         <SearchProducts />
         <StoreCategory />
       </Grid>
+      <Grid
+        size={{ xs: 12, sm: 11 }}
+        sx={{
+          backgroundImage: `url(${Data.Store_Banner})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          height: { md: 500, sm: 300, xs: 200 },
+          marginX: "auto",
+          marginTop: { lg: -12, xs: 2 },
+          zIndex: { lg: -10, xs: 0 },
+        }}
+      />
     </Grid>
   );
 };
