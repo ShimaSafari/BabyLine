@@ -15,7 +15,6 @@ const StoreAllProducts = () => {
     // Grid Container for 8 col bg white
     <Grid
       container
-      size={{ xs: 12, md: 7.5 }}
       sx={{
         backgroundColor: "#FFFCF9",
         borderRadius: "50px",

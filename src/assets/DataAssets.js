@@ -47,6 +47,11 @@ import About_info2 from "./images/About_info2.png";
 import i_Line_Orange from "./images/i_Line_orange.svg";
 // img in Store Page
 import i_searchicon from "./images/i_searchicon.svg";
+import i_off50 from "./images/i_off50.png";
+import Bg_StoreOff from "./images/Bg_StoreOff.png";
+import Bg_StoreOff_Box from "./images/Bg_StoreOff_Box.svg";
+import Bg_Store_sun from "./images/Bg_Store_sun.png";
+
 //--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
@@ -113,6 +118,10 @@ export const Data = {
   p_EasterBunny,
   p_BabySeatS2,
   i_searchicon,
+  i_off50,
+  Bg_StoreOff,
+  Bg_StoreOff_Box,
+  Bg_Store_sun,
 };
 
 export const Products = [
@@ -317,3 +326,15 @@ Products.forEach((product) => {
     product.discountPercent = "";
   }
 });
+export const TAGS = [
+  "New Born",
+  "3-6 Months",
+  "6-12 Months",
+  "1-3 Years ",
+  "3-7 Years",
+  "7 -12 years",
+  "Teen",
+  "For Mother",
+  "Toys",
+  "Baby stroller"
+];

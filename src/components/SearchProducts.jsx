@@ -6,10 +6,9 @@ const SearchProducts = () => {
   return (
     <Grid
       container
-      size={{ sm: 12, md: 4.2 }}
+      size={12}
       component="form"
       sx={{
-        height: "80px",
         gap: "7px",
         flexWrap: "nowrap",
         justifyContent: { md: "end" },
@@ -24,9 +23,8 @@ const SearchProducts = () => {
         size="small"
         // customizing style of search button
         sx={{
-          height: "80px",
+          height: "75px",
           flexGrow: 1,
-          // width: "380px",
           color: "text.secondary",
           backgroundColor: "#FFFCF9",
           borderRadius: "50px 0px 0px 50px",
