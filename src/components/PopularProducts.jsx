@@ -16,7 +16,9 @@ const PopularProducts = () => {
   const { Products } = useContext(ShopContext);
   const [PopularProducts, setPopularProduct] = useState([]);
   useEffect(() => {
-    setPopularProduct(Products); // .slice(0,10)
+    const bestSeller = Products.filter((item) =>(item.bestseller));
+    // console.log(bestSeller);
+    setPopularProduct(bestSeller);
   }, []);
 
   const settings = {

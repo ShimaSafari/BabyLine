@@ -4,6 +4,9 @@ import Grid from "@mui/material/Grid2";
 import { Box, Typography, TextField, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   const TextFieldPink = styled(TextField)(({ theme }) => ({
     "& .MuiInputLabel-root": {
       color: theme.palette.text.secondary,
@@ -98,6 +101,7 @@ const Contact = () => {
             <Grid
               container
               component="form"
+              onSubmit={handleSubmit}
               size={{ lg: 6, xs: 12 }}
               columnSpacing={"22px"}
               rowSpacing={"16px"}
@@ -108,6 +112,7 @@ const Contact = () => {
                   label="Your Name"
                   variant="outlined"
                   fullWidth
+                  required
                 />
               </Grid>
               <Grid size={6} sx={{ height: "75px" }}>
@@ -116,6 +121,7 @@ const Contact = () => {
                   label="Location"
                   variant="outlined"
                   fullWidth
+                  required
                 />
               </Grid>
               <Grid size={6} sx={{ height: "75px" }}>
@@ -124,6 +130,7 @@ const Contact = () => {
                   label="Mobile Number"
                   variant="outlined"
                   fullWidth
+                  required
                   type="tel"
                 />
               </Grid>
@@ -133,6 +140,7 @@ const Contact = () => {
                   label="Email Address"
                   variant="outlined"
                   fullWidth
+                  required
                   type="email"
                 />
               </Grid>
@@ -140,6 +148,7 @@ const Contact = () => {
                 <TextFieldPink
                   id="outlined-multiline-static"
                   multiline
+                  required
                   rows={4}
                   label="Your Valuble Message"
                   sx={{

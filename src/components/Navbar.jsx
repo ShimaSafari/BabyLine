@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   Typography,
   Box,
@@ -115,30 +115,30 @@ const Navbar = () => {
       >
         {/* 1- section Grid for logo */}
         <Grid container size={{ lg: 2, xs: 6 }}>
-          <Typography
-            // variant="h1"
-            sx={{
-              color: "common.main",
-              fontSize: { md: 50, xs: 30 },
-              fontStyle: "normal",
-              fontWeight: 700,
-              lineHeight: "normal",
-            }}
-          >
-            nini
-          </Typography>
-          <Typography
-            // variant="h1"
-            component="span"
-            sx={{
-              fontSize: { md: 50, xs: 30 },
-              fontStyle: "normal",
-              fontWeight: 700,
-              lineHeight: "normal",
-            }}
-          >
-            bits
-          </Typography>
+          <NavLink to={`/`} style={{display:'flex'}}>
+            <Typography
+              sx={{
+                color: "common.main",
+                fontSize: { md: 50, xs: 30 },
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "normal",
+              }}
+            >
+              nini
+            </Typography>
+            <Typography
+              component="span"
+              sx={{
+                fontSize: { md: 50, xs: 30 },
+                fontStyle: "normal",
+                fontWeight: 700,
+                lineHeight: "normal",
+              }}
+            >
+              bits
+            </Typography>
+          </NavLink>
         </Grid>
         {/* 2- section Grid for menu */}
         <Grid
@@ -148,22 +148,22 @@ const Navbar = () => {
         >
           <Box component="ul" sx={{ display: "flex", gap: "30px" }}>
             <NavLink to={"/"}>
-              <Typography component="li" variant="h4">
+              <Typography component="li" variant="h4" sx={{'&:hover':{color:'primary.main'}}}>
                 Home
               </Typography>
             </NavLink>
             <NavLink to={"/store"}>
-              <Typography component="li" variant="h4">
+              <Typography component="li" variant="h4" sx={{'&:hover':{color:'primary.main'}}}>
                 Store
               </Typography>
             </NavLink>
             <NavLink to={"/about"}>
-              <Typography component="li" variant="h4">
+              <Typography component="li" variant="h4" sx={{'&:hover':{color:'primary.main'}}}>
                 About
               </Typography>
             </NavLink>
             <NavLink to={"/contact"}>
-              <Typography component="li" variant="h4">
+              <Typography component="li" variant="h4" sx={{'&:hover':{color:'primary.main'}}}>
                 Contact
               </Typography>
             </NavLink>

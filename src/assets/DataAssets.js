@@ -48,7 +48,7 @@ import i_Line_Orange from "./images/i_Line_orange.svg";
 // img in Store Page
 import i_searchicon from "./images/i_searchicon.svg";
 import i_off50 from "./images/i_off50.png";
-import Store_Banner from "./images/Store_Banner.png"
+import Store_Banner from "./images/Store_Banner.png";
 
 //--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
@@ -117,7 +117,7 @@ export const Data = {
   p_BabySeatS2,
   i_searchicon,
   i_off50,
-  Store_Banner
+  Store_Banner,
 };
 
 export const Products = [
@@ -306,11 +306,11 @@ export const Products = [
 ];
 
 export const Categories = [
-  "Party Shop & Gift Sets",
-  "Newborn & Baby Care Shop",
-  "Toddlers Clothing & Accessories",
-  "Toys Books & Games",
-  "Strollers Car Seats & Ride-Ons",
+  { id: 1, name: "Party Shop & Gift Sets", image: [About_category1] },
+  { id: 2, name: "Newborn & Baby Care Shop", image: [About_category2] },
+  { id: 3, name: "Toddlers Clothing & Accessories", image: [About_category3] },
+  { id: 4, name: "Toys Books & Games", image: [About_category4] },
+  { id: 5, name: "Strollers Car Seats & Ride-Ons", image: [About_category5] },
 ];
 // function to  discountPercent
 Products.forEach((product) => {
@@ -332,5 +332,5 @@ export const TAGS = [
   "Teen",
   "For Mother",
   "Toys",
-  "Baby stroller"
+  "Baby stroller",
 ];

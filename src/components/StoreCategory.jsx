@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Data, TAGS } from "../assets/DataAssets";
 import Grid from "@mui/material/Grid2";
 import { Box, Typography } from "@mui/material";
+import { ShopContext } from "../context/ShopContext";
 const StoreCategory = () => {
+  const { Categories } = useContext(ShopContext);
+  console.log(Categories);
+
   return (
     <Grid
       container
@@ -56,123 +60,30 @@ const StoreCategory = () => {
           gap: 1,
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 2,
-          }}
-        >
-          <img src={Data.About_category1} alt="" width="180px" />
-          <Typography
-            variant="body2"
-            fontWeight={700}
+        {Categories.map((item, index) => (
+          <Box
+            key={index}
             sx={{
-              width: "70%",
-              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+              width: "180px",
             }}
           >
-            Party & Gifts items
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            width: "180px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 2,
-          }}
-        >
-          <img src={Data.About_category2} alt="" width="180px" />
-          <Typography
-            variant="body2"
-            fontWeight={700}
-            sx={{
-              width: "70%",
-              textAlign: "center",
-            }}
-          >
-            Strollers & Car Seats
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            width: "180px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 2,
-          }}
-        >
-          <img src={Data.About_category3} alt="" width="180px" />
-          <Typography
-            variant="body2"
-            fontWeight={700}
-            sx={{
-              width: "70%",
-              textAlign: "center",
-            }}
-          >
-            Toddlers Clothing & Sets
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            width: "180px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 2,
-          }}
-        >
-          <img src={Data.About_category4} alt="" width="180px" />
-          <Typography
-            variant="body2"
-            fontWeight={700}
-            sx={{
-              width: "70%",
-              textAlign: "center",
-            }}
-          >
-            Toys, Books & Games
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            width: "180px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 2,
-          }}
-        >
-          <img src={Data.About_category5} alt="" width="180px" />
-          <Typography
-            variant="body2"
-            fontWeight={700}
-            sx={{
-              width: "70%",
-              textAlign: "center",
-            }}
-          >
-            Baby Care Products
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            width: "180px",
-            display: { xs: "flex", md: "none", lg: "flex" },
-            justifyContent: "center",
-          }}
-        >
-          <Typography
-            sx={{ width: "70%", color: "warning.main", paddingTop: 4 }}
-          >
-            Explore More Categories
-          </Typography>
-        </Box>
+            <img src={item.image[0]} alt="" width="180px" />
+            <Typography
+              variant="body2"
+              fontWeight={700}
+              sx={{
+                width: "70%",
+                textAlign: "center",
+              }}
+            >
+              {item.name}
+            </Typography>
+          </Box>
+        ))}
       </Grid>
       {/* 3- Grid Store TAGS */}
       <Grid
