@@ -328,7 +328,7 @@ export const TAGS = [
   "6-12 Months",
   "1-3 Years ",
   "3-7 Years",
-  "7 -12 years",
+  "7-12 years",
   "Teen",
   "For Mother",
   "Toys",

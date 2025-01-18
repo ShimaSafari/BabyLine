@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { Products } from "../assets/DataAssets";
 import { Categories } from "../assets/DataAssets";
+import { TAGS } from "../assets/DataAssets";
 
 export const ShopContext = createContext();
 
@@ -12,7 +13,8 @@ const ShopContextProvider = (props) => {
     Products,
     currency,
     delivery_fee,
-    Categories
+    Categories,
+    TAGS
   };
   return (
     <ShopContext.Provider value={value}>

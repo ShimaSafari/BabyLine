@@ -1,11 +1,38 @@
-import React, { useContext } from "react";
-import { Data, TAGS } from "../assets/DataAssets";
+import React, { useContext, useEffect, useState } from "react";
+import { Data } from "../assets/DataAssets";
 import Grid from "@mui/material/Grid2";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Checkbox } from "@mui/material";
 import { ShopContext } from "../context/ShopContext";
 const StoreCategory = () => {
+  const { Products } = useContext(ShopContext);
   const { Categories } = useContext(ShopContext);
-  console.log(Categories);
+  const { TAGS } = useContext(ShopContext);
+
+  const [category, setCategory] = useState([]);
+   const [filterProducts, setFilterProducts] = useState([]);
+  const toggleCategory = (e) => {
+    if (category.includes(e.target.value)) {
+      setCategory((prev) => prev.filter((item) => item !== e.target.value));
+    } else {
+      setCategory((prev) => [...prev, e.target.value]);
+    }
+  };
+
+  const applyFilter = () => {
+    let productsCopy = Products.slice();
+    if (category.length > 0) {
+      productsCopy = productsCopy.filter((item) =>
+        category.includes(item.category)
+      );
+    }
+    setFilterProducts(productsCopy);
+  };
+  useEffect(() => {
+    setFilterProducts(Products)
+  }, []);
+  useEffect(() => {
+    applyFilter();
+  }, [category]);
 
   return (
     <Grid
@@ -56,39 +83,85 @@ const StoreCategory = () => {
         container
         sx={{
           justifyContent: "space-evenly",
-          alignContent: "center",
+          // alignContent: "center",
           gap: 1,
         }}
       >
         {Categories.map((item, index) => (
-          <Box
+          // <Checkbox onChange={toggleCategory} value={item.name} key={index}>
+          // <Box
+          //   // component="checkbox"
+          //   key={index}
+          //   sx={{
+          //     display: "flex",
+          //     flexDirection: "column",
+          //     alignItems: "center",
+          //     gap: 2,
+          //     width: "180px",
+          //     cursor: "pointer",
+          //   }}
+          //   onClick={() => toggleCategory(item.name)}
+          //   onChange={toggleCategory}
+          //   value={item.name}
+          // >
+          //   <img src={item.image[0]} alt="" width="180px" />
+          //   <Typography
+          //     variant="body2"
+          //     fontWeight={700}
+          //     sx={{
+          //       width: "70%",
+          //       textAlign: "center",
+          //     }}
+          //   >
+          //     {item.name}
+          //   </Typography>
+          // </Box>
+          //  </Checkbox>
+
+          <Checkbox
+            onChange={toggleCategory}
+            value={item.name}
+            disableRipple
             key={index}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 2,
-              width: "180px",
-            }}
-          >
-            <img src={item.image[0]} alt="" width="180px" />
-            <Typography
-              variant="body2"
-              fontWeight={700}
-              sx={{
-                width: "70%",
-                textAlign: "center",
-              }}
-            >
-              {item.name}
-            </Typography>
-          </Box>
+            icon={
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: 2,
+                  width: "180px",
+                  height: "180px",
+                  cursor: "pointer",
+                }}
+              >
+                <img src={item.image[0]} alt="" width="180px" />
+              </Box>
+            }
+            checkedIcon={
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: 2,
+                  width: "180px",
+                  cursor: "pointer",
+                  borderRadius: "45px",
+                  filter:
+                    "drop-shadow(0 10px 8px rgb(255 150 26 / 0.1)) drop-shadow(0 4px 3px rgb(255 150 26 / 0.3))",
+                }}
+              >
+                <img src={item.image[0]} alt="" width="180px" />
+              </Box>
+            }
+          />
         ))}
       </Grid>
       {/* 3- Grid Store TAGS */}
       <Grid
         sx={{
-          marginTop: 2,
+          marginY: 2,
         }}
       >
         <Box
@@ -147,7 +220,7 @@ const StoreCategory = () => {
         sx={{
           display: { xs: "flex", md: "none", lg: "flex" },
           justifyContent: "center",
-          marginY: 2,
+          marginY: 6,
         }}
       >
         <img src={Data.i_off50} alt="off50%" />
