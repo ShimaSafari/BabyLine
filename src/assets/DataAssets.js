@@ -299,8 +299,8 @@ export const Products = [
     discountPrice: 6799,
     discountPercent: 0,
     image: [p_BabySeatS2],
-    category: "Toys Books & Games",
-    sizes: ["S", "M"],
+    category: "Strollers Car Seats & Ride-Ons",
+    sizes: ["S", "M", "L"],
     bestseller: false,
   },
 ];

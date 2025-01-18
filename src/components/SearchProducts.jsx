@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Grid from "@mui/material/Grid2";
 import { TextField, IconButton } from "@mui/material";
 import { Data } from "../assets/DataAssets";
+import { ShopContext } from "../context/ShopContext";
 const SearchProducts = () => {
+  const { inputValue, setInputValue } = useContext(ShopContext);
   return (
     <Grid
       container
       size={12}
-      component="form"
       sx={{
         gap: "7px",
         flexWrap: "nowrap",
@@ -21,6 +22,8 @@ const SearchProducts = () => {
         type="search"
         variant="filled"
         size="small"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
         // customizing style of search button
         sx={{
           height: "75px",
@@ -71,7 +74,6 @@ const SearchProducts = () => {
         sx={{
           backgroundColor: "#FFFCF9",
           borderRadius: "0px 50px 50px 0px",
-          // width: "80px",
           height: "100%",
           paddingRight: 2,
         }}
