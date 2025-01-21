@@ -2,9 +2,9 @@ import { createTheme } from "@mui/material";
 
 const myTheme = createTheme({
   palette: {
-    common: { main: "#FD0000" },
     primary: { main: "#E26666" },
     secondary: { main: "#E7F6DD " },
+    common: { main: "#FD0000" },
     warning: { main: "#FF961A" },
     background: {
       paper: "#D9D9D9",
@@ -18,10 +18,7 @@ const myTheme = createTheme({
   typography: {
     fontFamily: "Nunito",
     fontSize: 24,
-    fontWeightLight: 300,
-    fontWeightRegular: 600,
-    fontWeightMedium: 700,
-    fontWeightBold: 800,
+    fontWeight: 800,
     h1: {
       fontSize: 50,
       fontStyle: "normal",

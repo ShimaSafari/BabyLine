@@ -67,12 +67,12 @@ const ProductItem = ({
                 position: "absolute",
                 bottom: 0,
                 left: 0,
-                "&:hover" :{
-                  transitionProperty:"all",
-                  transitionDuration: '250ms',
-                  transitionTimingFunction:"cubic-bezier(0, 0, 0.2, 1)",
-                  transform:"scale(1.05)"
-                }
+                "&:hover": {
+                  transitionProperty: "all",
+                  transitionDuration: "250ms",
+                  transitionTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+                  transform: "scale(1.05)",
+                },
               }}
               image={image[0]}
             />
@@ -115,9 +115,13 @@ const ProductItem = ({
               fontWeight: 800,
               lineHeight: "normal",
               textTransform: "none",
+              "&:hover": {
+                color: "#000",
+                backgroundColor: "warning.main",
+              },
             }}
           >
-            Add to Cart
+            Add To Cart
           </Button>
         </CardActions>
       </Card>

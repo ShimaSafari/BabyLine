@@ -54,7 +54,11 @@ import Store_Banner from "./images/Store_Banner.png";
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
 import p_SleevyShirt from "./images/p_SleevyShirt.png";
-import p_PlushTeddy from "./images/p_PlushTeddy.png";
+import p_PlushTeddy_1 from "./images/p_PlushTeddy_1.png";
+import p_PlushTeddy_2 from "./images/p_PlushTeddy_2.jpg";
+import p_PlushTeddy_3 from "./images/p_PlushTeddy_3.jpg";
+import p_PlushTeddy_4 from "./images/p_PlushTeddy_4.jpg";
+import p_PlushTeddy_5 from "./images/p_PlushTeddy_5.jpg";
 import p_CareCarry from "./images/p_CareCarry.png";
 import p_FullSleevTshirt from "./images/p_FullSleevTshirt.png";
 import p_DisneyBag from "./images/p_DisneyBag.png";
@@ -73,7 +77,11 @@ export const Data = {
   p_BunnySuit,
   p_PlushToy,
   p_SleevyShirt,
-  p_PlushTeddy,
+  p_PlushTeddy_1,
+  p_PlushTeddy_2,
+  p_PlushTeddy_3,
+  p_PlushTeddy_4,
+  p_PlushTeddy_5,
   p_CareCarry,
   Left,
   Right,
@@ -168,9 +176,15 @@ export const Products = [
     price: 2200,
     discountPrice: 1699,
     discountPercent: 0,
-    image: [p_PlushTeddy],
+    image: [
+      p_PlushTeddy_1,
+      p_PlushTeddy_2,
+      p_PlushTeddy_3,
+      p_PlushTeddy_4,
+      p_PlushTeddy_5,
+    ],
     category: "Party Shop & Gift Sets",
-    sizes: ["L"],
+    sizes: ["M", "L"],
     bestseller: true,
   },
   {
