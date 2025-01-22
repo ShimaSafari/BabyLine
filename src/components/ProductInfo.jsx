@@ -13,18 +13,23 @@ import {
   FormControl,
 } from "@mui/material";
 import AddToCartIcon from "../assets/icons/AddToCartIcon";
+
+// -- import css in slider component
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 const ProductInfo = () => {
   const { productId } = useParams();
   const { Products, currency } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
-  const [age, setAge] = useState("");
 
   const fetchProductData = async () => {
     Products.map((item) => {
       if (item.id == productId) {
         setProductData(item);
-        setImage(item.image[0]);
+        setImage(item.image[1]);
         return null;
       }
     });
@@ -32,6 +37,40 @@ const ProductInfo = () => {
   useEffect(() => {
     fetchProductData();
   }, [productId, Products]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
   return productData ? (
     <Grid
       container
@@ -54,7 +93,7 @@ const ProductInfo = () => {
         }}
       >
         {/* 1- grid for Galley of products */}
-        <Grid container size={{ lg: 5.5, xs: 12 }}>
+        <Grid container size={{ lg: 5.5, xs: 12 }} gap={3}>
           <Grid
             size={12}
             sx={{
@@ -66,29 +105,29 @@ const ProductInfo = () => {
             <img src={image} style={{ borderRadius: "35px" }} />
           </Grid>
           <Grid
-            size={12}
-            className="grid-scroll"
+            className="slider-container"
             sx={{
-              height: "100px",
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "row",
-              overflowX: "auto",
-              gap: 3,
+              height: "140px",
               cursor: "pointer",
             }}
           >
-            {productData.image.map((item, index) => (
-              <Box sx={{ display: "flex", width: "100px" }}>
-                <img
-                  onClick={() => setImage(item)}
-                  src={item}
-                  key={index}
-                  alt={index}
-                  style={{ borderRadius: "20px" }}
-                />
-              </Box>
-            ))}
+            <Slider {...settings}>
+              {productData.image.map((item, index) => (
+                <Grid container>
+                  <img
+                    onClick={() => setImage(item)}
+                    src={item}
+                    key={index}
+                    alt={index}
+                    style={{
+                      borderRadius: "20px",
+                      // width: "100px",
+                      height: "100px",
+                    }}
+                  />
+                </Grid>
+              ))}
+            </Slider>
           </Grid>
         </Grid>
 
