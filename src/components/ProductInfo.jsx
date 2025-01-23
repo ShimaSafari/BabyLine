@@ -105,13 +105,13 @@ const ProductInfo = () => {
             <img src={image} style={{ borderRadius: "35px" }} />
           </Grid>
           <Grid
+            size={11.8}
             className="slider-container"
             sx={{
               height: "140px",
-              cursor: "pointer",
             }}
           >
-            <Slider {...settings}>
+            <Slider {...settings} >
               {productData.image.map((item, index) => (
                 <Grid container>
                   <img
@@ -121,8 +121,12 @@ const ProductInfo = () => {
                     alt={index}
                     style={{
                       borderRadius: "20px",
-                      // width: "100px",
+                      width: "100px",
                       height: "100px",
+                      objectFit: "contain",
+                      display: "flex",
+                      justifySelf: "center",
+                      cursor: "pointer",
                     }}
                   />
                 </Grid>
