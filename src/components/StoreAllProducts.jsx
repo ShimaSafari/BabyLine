@@ -72,6 +72,7 @@ const StoreAllProducts = () => {
       >
         {PopularProducts.map((item, index) => (
           <Grid
+            key={index}
             container
             size={{ lg: 4, md: 6, sm: 6, xs: 12 }}
             sx={{

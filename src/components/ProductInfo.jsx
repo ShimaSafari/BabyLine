@@ -24,6 +24,7 @@ const ProductInfo = () => {
   const { Products, currency } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
+  const [selectedSize, setSelectedSize] = useState(''); 
 
   const fetchProductData = async () => {
     Products.map((item) => {
@@ -111,13 +112,12 @@ const ProductInfo = () => {
               height: "140px",
             }}
           >
-            <Slider {...settings} >
+            <Slider {...settings}>
               {productData.image.map((item, index) => (
-                <Grid container>
+                <Grid container key={index}>
                   <img
                     onClick={() => setImage(item)}
                     src={item}
-                    key={index}
                     alt={index}
                     style={{
                       borderRadius: "20px",
@@ -220,6 +220,8 @@ const ProductInfo = () => {
                   labelId="demo-select-small-label"
                   id="demo-select-small"
                   label="Choose Size"
+                  value={selectedSize}
+                  onChange={(e) => setSelectedSize(e.target.value)}
                   sx={{
                     "& .MuiOutlinedInput-notchedOutline": {
                       border: 0,

@@ -83,41 +83,10 @@ const StoreCategory = () => {
         container
         sx={{
           justifyContent: "space-evenly",
-          // alignContent: "center",
           gap: 1,
         }}
       >
         {Categories.map((item, index) => (
-          // <Checkbox onChange={toggleCategory} value={item.name} key={index}>
-          // <Box
-          //   // component="checkbox"
-          //   key={index}
-          //   sx={{
-          //     display: "flex",
-          //     flexDirection: "column",
-          //     alignItems: "center",
-          //     gap: 2,
-          //     width: "180px",
-          //     cursor: "pointer",
-          //   }}
-          //   onClick={() => toggleCategory(item.name)}
-          //   onChange={toggleCategory}
-          //   value={item.name}
-          // >
-          //   <img src={item.image[0]} alt="" width="180px" />
-          //   <Typography
-          //     variant="body2"
-          //     fontWeight={700}
-          //     sx={{
-          //       width: "70%",
-          //       textAlign: "center",
-          //     }}
-          //   >
-          //     {item.name}
-          //   </Typography>
-          // </Box>
-          //  </Checkbox>
-
           <Checkbox
             onChange={toggleCategory}
             value={item.name}
