@@ -73,7 +73,7 @@ const PopularProducts = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Title text="Popular products" />
+      <Title text="Popular Products" />
       {/* --------------- rendering Products -------------- */}
       <Grid
         sx={{ paddingX: { md: "70px", xs: "50px" } }}

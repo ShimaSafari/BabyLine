@@ -51,7 +51,13 @@ import i_off50 from "./images/i_off50.png";
 import Store_Banner from "./images/Store_Banner.png";
 // img in Product Page
 // img in Reviews components
-import Reviews_photo from "./images/Reviews_photo.png"
+import Reviews_photo from "./images/Reviews_photo.png";
+// img in ProductPhotoShoot components
+import Bg_PhotoShoot from "./images/Bg_PhotoShoot.png";
+import PhotoShoot_1 from "./images/PhotoShoot_1.png";
+import PhotoShoot_2 from "./images/PhotoShoot_2.png";
+import PhotoShoot_3 from "./images/PhotoShoot_3.png";
+import PhotoShoot_4 from "./images/PhotoShoot_4.png";
 
 //--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
@@ -152,6 +158,11 @@ export const Data = {
   i_off50,
   Store_Banner,
   Reviews_photo,
+  Bg_PhotoShoot,
+  PhotoShoot_1,
+  PhotoShoot_2,
+  PhotoShoot_3,
+  PhotoShoot_4,
 };
 
 export const Products = [
