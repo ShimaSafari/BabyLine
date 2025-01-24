@@ -174,7 +174,7 @@ const Navbar = () => {
           container
           size={{ lg: 2, xs: 6 }}
           spacing={4}
-          sx={{ display: { xs: "none", md: "flex" } }}
+          sx={{ display: { xs: "none", lg: "flex" } }}
         >
           <SearchIcon />
           <UserIcon />
@@ -185,7 +185,7 @@ const Navbar = () => {
           container
           size={{ lg: 2, xs: 6 }}
           spacing={4}
-          sx={{ display: { xs: "flex", md: "none" } }}
+          sx={{ display: { xs: "flex", lg: "none" } }}
         >
           {/* button or menu icon to open drawer menu */}
           <Button onClick={toggleDrawer(true)}>

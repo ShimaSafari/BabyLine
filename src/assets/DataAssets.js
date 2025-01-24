@@ -49,6 +49,9 @@ import i_Line_Orange from "./images/i_Line_orange.svg";
 import i_searchicon from "./images/i_searchicon.svg";
 import i_off50 from "./images/i_off50.png";
 import Store_Banner from "./images/Store_Banner.png";
+// img in Product Page
+// img in Reviews components
+import Reviews_photo from "./images/Reviews_photo.png"
 
 //--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
@@ -148,6 +151,7 @@ export const Data = {
   i_searchicon,
   i_off50,
   Store_Banner,
+  Reviews_photo,
 };
 
 export const Products = [

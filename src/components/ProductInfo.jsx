@@ -175,7 +175,6 @@ const ProductInfo = () => {
                 sx={{
                   "& > span .MuiRating-icon": {
                     color: "common.main",
-                    borderRadius: 2,
                   },
                 }}
               />

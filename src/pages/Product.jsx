@@ -8,7 +8,7 @@ const Product = () => {
       container
       sx={{ paddingX: { md: "70px", sm: "10px" }, borderRadius: "50px" }}
     >
-      {/* <ProductInfo /> */}
+      <ProductInfo />
       <ProductReview/>
     </Grid>
   );

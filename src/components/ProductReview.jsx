@@ -4,6 +4,7 @@ import { Tab, Tabs, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ShopContext } from "../context/ShopContext";
 import { useParams } from "react-router-dom";
+import Reviews from "./Reviews";
 
 const StyledTabs = styled(Tabs)(() => ({
   minHeight: "40px",
@@ -30,9 +31,15 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   color: theme.palette.text.secondary,
   background: "#FDE7CE",
   fontSize: 20,
+  fontWeight: 700,
   textTransform: "none",
   borderRadius: "13px 13px 0 0",
-  padding: "0 51px",
+  [theme.breakpoints.up("xs")]: {
+    padding: "0 30px",
+  },
+  [theme.breakpoints.up("sm")]: {
+    padding: "0 51px",
+  },
 }));
 
 function CustomTabPanel(props) {
@@ -50,7 +57,7 @@ function CustomTabPanel(props) {
           container
           size={12}
           sx={{
-            height: "200px",
+            minHeight: "200px",
             backgroundColor: "#FFD8D8",
             borderRadius: "25px",
             justifyContent: "center",
@@ -101,7 +108,7 @@ const ProductReview = () => {
       sx={{
         backgroundColor: "#FFFCF9",
         borderRadius: "50px",
-        height: "450px",
+        marginY: { xs: "30px", lg: "40px" },
       }}
     >
       <Grid
@@ -122,12 +129,12 @@ const ProductReview = () => {
           </StyledTabs>
         </Grid>
         <CustomTabPanel value={value} index={0}>
-          <Typography color="#726868" fontWeight={600}>
+          <Typography color="#726868" fontWeight={700} px={4}>
             {productData.description}
           </Typography>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          
+          <Reviews />
         </CustomTabPanel>
       </Grid>
     </Grid>

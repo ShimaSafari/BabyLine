@@ -20,3 +20,6 @@ a {
   scrollbar-width: thin;
   scrollbar-color: #ff961a #fffcf9;
 }
+.review-slider .slick-track .slick-slide div {
+  display: flex !important;
+}

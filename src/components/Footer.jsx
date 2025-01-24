@@ -203,9 +203,9 @@ const Footer = () => {
           <Typography variant="body2">All rights reserved</Typography>
         </Grid>
         <Grid sx={{ display: "flex", gap: 1 }}>
-          <Typography variant="body2">Designed By</Typography>
+          <Typography variant="body2">Designed By S.S</Typography>
           <HeartIcon />
-          <Typography variant="body2">Mohammed Jaseem</Typography>
+          <Typography variant="body2">Copyright © {new Date().getFullYear()}</Typography>
         </Grid>
       </Grid>
     </Grid>
