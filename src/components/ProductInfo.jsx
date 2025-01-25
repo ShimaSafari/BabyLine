@@ -11,6 +11,8 @@ import {
   Select,
   MenuItem,
   FormControl,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import AddToCartIcon from "../assets/icons/AddToCartIcon";
 
@@ -24,7 +26,19 @@ const ProductInfo = () => {
   const { Products, currency } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
-  const [selectedSize, setSelectedSize] = useState(''); 
+  const [selectedSize, setSelectedSize] = useState("");
+  // const context = useContext(ShopContext); // Get the context
+  // if (!context) {
+  //   // Handle the case where the context is not available
+  //   return <div>Shop context is not available!</div>; // Or return null, or a loading indicator
+  // }
+
+  const { addToCart, snackbar, setSnackbar, handleCloseSnackbar } =
+    useContext(ShopContext);
+
+  const handleAddToCart = () => {
+    addToCart(productData.id, selectedSize); // No need to check return value here
+  };
 
   const fetchProductData = async () => {
     Products.map((item) => {
@@ -193,6 +207,8 @@ const ProductInfo = () => {
                 color="warning"
                 disableElevation
                 endIcon={<AddToCartIcon />}
+                // onClick={() => addToCart(productData.id, selectedSize)}
+                onClick={handleAddToCart}
                 sx={{
                   borderRadius: "30px",
                   paddingY: "10px",
@@ -253,6 +269,21 @@ const ProductInfo = () => {
           </Grid>
         </Grid>
       </Grid>
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={4000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        key={snackbar.message}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          sx={{ fontWeight: 800, borderRadius: "15px" }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Grid>
   ) : (
     <div></div>
