@@ -20,7 +20,7 @@ const ShopContextProvider = (props) => {
     if (!size) {
       setSnackbar({
         open: true,
-        message: "Please Select a Product Size !",
+        message: "Please Select Size!",
         severity: "error",
       });
       return false;
@@ -39,7 +39,7 @@ const ShopContextProvider = (props) => {
     setCartItems(cartData);
     setSnackbar({
       open: true,
-      message: "Product Added To Cart !",
+      message: "Added To Cart!",
       severity: "success",
     });
     return true;
@@ -50,6 +50,22 @@ const ShopContextProvider = (props) => {
       return;
     }
     setSnackbar({ ...snackbar, open: false });
+  };
+
+  const getCartCount = () => {
+    let totalCount = 0;
+    for (const items in cartItems) {
+      for (const item in cartItems[items]) {
+        try {
+          if (cartItems[items][item] > 0) {
+            totalCount += cartItems[items][item];
+          }
+        } catch (error) {
+          console.error();
+        }
+      }
+    }
+    return totalCount;
   };
   const value = {
     Products,
@@ -64,6 +80,7 @@ const ShopContextProvider = (props) => {
     snackbar,
     setSnackbar,
     handleCloseSnackbar,
+    getCartCount
   };
   return (
     <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>

@@ -1,4 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
+import { React, useState } from "react";
+import { NavLink } from "react-router-dom";
 import {
   Typography,
   Box,
@@ -9,13 +10,17 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  ListItemIcon,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import SearchIcon from "../assets/icons/SearchIcon";
 import UserIcon from "../assets/icons/UserIcon";
 import CartIcon from "../assets/icons/CartIcon";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import HomeIcon from "@mui/icons-material/Home";
+import StoreIcon from "@mui/icons-material/Store";
+import GroupsIcon from "@mui/icons-material/Groups";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -30,57 +35,78 @@ const Navbar = () => {
         marginTop: 2,
         "& .MuiTypography-root": {
           fontSize: "20px",
-
           "&:hover": {
             color: "primary.main",
           },
+        },
+        "& .MuiSvgIcon-root": { color: "primary.main" },
+        "& .MuiListItemButton-root": {
+          columnGap: 2,
+        },
+        "& .MuiListItem-root": {
+          display: "block",
         },
       }}
       role="presentation"
       onClick={toggleDrawer(false)}
     >
       {/* List = ul */}
-      <List>
+      <List sx={{}}>
         {/* ListItem = ul , navlink or a is inside, display=block for better UI */}
-        <ListItem sx={{ display: "block" }}>
+        <ListItem>
           <NavLink to={"/"}>
             <ListItemButton>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
               <ListItemText primary={"Home"} />
             </ListItemButton>
           </NavLink>
         </ListItem>
-        <ListItem sx={{ display: "block" }}>
+        <ListItem>
           <NavLink to={"/store"}>
             <ListItemButton>
+              <ListItemIcon>
+                <StoreIcon />
+              </ListItemIcon>
               <ListItemText primary={"Store"} />
             </ListItemButton>
           </NavLink>
         </ListItem>
-        <ListItem sx={{ display: "block" }}>
+        <ListItem>
           <NavLink to={"/about"}>
             <ListItemButton>
+              <ListItemIcon>
+                <GroupsIcon />
+              </ListItemIcon>
               <ListItemText primary={"About"} />
             </ListItemButton>
           </NavLink>
         </ListItem>
-        <ListItem sx={{ display: "block" }}>
+        <ListItem>
           <NavLink to={"/contact"}>
             <ListItemButton>
+              <ListItemIcon>
+                <ContactMailIcon fontSize="small" />
+              </ListItemIcon>
               <ListItemText primary={"Contact"} />
             </ListItemButton>
           </NavLink>
         </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem sx={{ display: "block" }}>
+        <Divider />
+        <ListItem>
           <NavLink to={"/cart"}>
             <ListItemButton>
+              <ListItemIcon>
+                <CartIcon />
+              </ListItemIcon>
               <ListItemText primary="Cart" />
             </ListItemButton>
           </NavLink>
         </ListItem>
       </List>
+
+      <List></List>
     </Box>
   );
   return (
@@ -115,7 +141,7 @@ const Navbar = () => {
       >
         {/* 1- section Grid for logo */}
         <Grid container size={{ lg: 2, xs: 6 }}>
-          <NavLink to={`/`} style={{display:'flex'}}>
+          <NavLink to={`/`} style={{ display: "flex" }}>
             <Typography
               sx={{
                 color: "common.main",
@@ -148,22 +174,38 @@ const Navbar = () => {
         >
           <Box component="ul" sx={{ display: "flex", gap: "30px" }}>
             <NavLink to={"/"}>
-              <Typography component="li" variant="h4" sx={{'&:hover':{color:'primary.main'}}}>
+              <Typography
+                component="li"
+                variant="h4"
+                sx={{ "&:hover": { color: "primary.main" } }}
+              >
                 Home
               </Typography>
             </NavLink>
             <NavLink to={"/store"}>
-              <Typography component="li" variant="h4" sx={{'&:hover':{color:'primary.main'}}}>
+              <Typography
+                component="li"
+                variant="h4"
+                sx={{ "&:hover": { color: "primary.main" } }}
+              >
                 Store
               </Typography>
             </NavLink>
             <NavLink to={"/about"}>
-              <Typography component="li" variant="h4" sx={{'&:hover':{color:'primary.main'}}}>
+              <Typography
+                component="li"
+                variant="h4"
+                sx={{ "&:hover": { color: "primary.main" } }}
+              >
                 About
               </Typography>
             </NavLink>
             <NavLink to={"/contact"}>
-              <Typography component="li" variant="h4" sx={{'&:hover':{color:'primary.main'}}}>
+              <Typography
+                component="li"
+                variant="h4"
+                sx={{ "&:hover": { color: "primary.main" } }}
+              >
                 Contact
               </Typography>
             </NavLink>
@@ -191,7 +233,13 @@ const Navbar = () => {
           <Button onClick={toggleDrawer(true)}>
             <MenuIcon sx={{ color: "primary.main", width: "40px" }} />
           </Button>
-          <Drawer open={open} onClose={toggleDrawer(false)}>
+          <Drawer
+            open={open}
+            onClose={toggleDrawer(false)}
+            sx={{
+              "& .MuiPaper-root": { backgroundColor: "background.default" },
+            }}
+          >
             {DrawerList}
           </Drawer>
         </Grid>

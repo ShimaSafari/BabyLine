@@ -27,11 +27,6 @@ const ProductInfo = () => {
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
-  // const context = useContext(ShopContext); // Get the context
-  // if (!context) {
-  //   // Handle the case where the context is not available
-  //   return <div>Shop context is not available!</div>; // Or return null, or a loading indicator
-  // }
 
   const { addToCart, snackbar, setSnackbar, handleCloseSnackbar } =
     useContext(ShopContext);
@@ -207,7 +202,6 @@ const ProductInfo = () => {
                 color="warning"
                 disableElevation
                 endIcon={<AddToCartIcon />}
-                // onClick={() => addToCart(productData.id, selectedSize)}
                 onClick={handleAddToCart}
                 sx={{
                   borderRadius: "30px",
