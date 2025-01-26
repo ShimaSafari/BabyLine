@@ -220,7 +220,9 @@ const Navbar = () => {
         >
           <SearchIcon />
           <UserIcon />
-          <CartIcon />
+          <NavLink to={"/cart"}>
+            <CartIcon />
+          </NavLink>
         </Grid>
         {/* 3-1 section Grid for HamMenu */}
         <Grid

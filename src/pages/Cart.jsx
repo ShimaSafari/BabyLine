@@ -1,9 +1,169 @@
-import React from 'react'
-
+import React, { useContext, useEffect, useState } from "react";
+import { ShopContext } from "../context/ShopContext";
+import Grid from "@mui/material/Grid2";
+import { Box, Typography, IconButton, Button } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 const Cart = () => {
-  return (
-    <div>Cart</div>
-  )
-}
+  const { Products, currency, cartItems } = useContext(ShopContext);
 
-export default Cart
+  const [cartData, setCartData] = useState([]);
+
+  useEffect(() => {
+    const tempData = [];
+    for (const items in cartItems) {
+      for (const item in cartItems[items]) {
+        if (cartItems[items][item] > 0) {
+          tempData.push({
+            id: items,
+            size: item,
+            quantity: cartItems[items][item],
+          });
+        }
+      }
+    }
+    console.log(tempData);
+
+    setCartData(tempData);
+  }, [cartItems]);
+  return (
+    <Grid
+      container
+      sx={{
+        paddingX: 2,
+        justifyContent: "center",
+      }}
+    >
+      <Grid
+        container
+        size={{ xs: 12, md: 9, lg: 7 }}
+        sx={{
+          backgroundColor: "secondary.main",
+          borderRadius: "25px",
+          flexDirection: { xs: "column", md: "row" },
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {cartData.map((item, index) => {
+          const productData = Products.find((product) => product.id == item.id);
+          return (
+            <Grid
+              container
+              key={index}
+              size={10}
+              sx={{
+                backgroundColor: "background.paper",
+                borderRadius: "24px",
+                justifyContent: { xs: "center", sm: "space-between" },
+                paddingX: { xs: 2, md: 6 },
+                paddingY: 2,
+                marginY: 2,
+                rowGap: 2,
+              }}
+            >
+              {/* 1- grid for img */}
+              <Grid
+                container
+                size={{ xs: 12, sm: "auto" }}
+                sx={{ borderRadius: "15px", justifyContent: "center" }}
+              >
+                <img
+                  src={productData.image[0]}
+                  alt={productData.name}
+                  style={{
+                    width: "150px",
+                    height: "140px",
+                    objectFit: "contain",
+                  }}
+                />
+              </Grid>
+              {/* 2- grid for product info */}
+              <Grid
+                container
+                size={{ xs: 11, sm: "auto" }}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-evenly",
+                  alignItems: { xs: "center", sm: "start" },
+                  rowGap: { xs: 2, sm: 0 },
+                }}
+              >
+                <Typography fontSize={{ xs: 30, sm: 32, md: 36 }}>
+                  {productData.name}
+                </Typography>
+                <Box
+                  sx={{
+                    width: "90%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Typography>
+                    {currency}
+                    {productData.discountPrice}
+                  </Typography>
+                  <Typography fontSize={20} color="#685555">
+                    Size: {item.size}
+                  </Typography>
+                </Box>
+                <Button
+                  variant="contained"
+                  sx={{
+                    width: "80px",
+                    height: "30px",
+                    borderRadius: "17px",
+                    fontSize: 14,
+                    textTransform: "none",
+                    alignSelf: { xs: "center", sm: "start" },
+                    "&:hover": {
+                      color: "#FFF",
+                      backgroundColor: "common.main",
+                    },
+                  }}
+                  disableRipple
+                >
+                  Remove
+                </Button>
+              </Grid>
+              {/* 3- grid for quantity */}
+              <Grid
+                container
+                size={{ xs: 12, sm: "auto" }}
+                sx={{
+                  flexDirection: { xs: "row-reverse", sm: "column" },
+                  justifyContent: { xs: "space-evenly", md: "space-between" },
+                  alignItems: "center",
+                }}
+              >
+                <IconButton size="small" color="primary">
+                  <AddIcon />
+                </IconButton>
+                <Typography
+                  component="span"
+                  sx={{
+                    backgroundColor: "#F8EFEF",
+                    textAlign: "center",
+                    borderRadius: "7px",
+
+                    minWidth: "70px",
+                    minHeight: "31px",
+                    fontSize: 20,
+                  }}
+                >
+                  {item.quantity}
+                </Typography>
+                <IconButton size="small" color="primary">
+                  <RemoveIcon />
+                </IconButton>
+              </Grid>
+            </Grid>
+          );
+        })}
+      </Grid>
+    </Grid>
+  );
+};
+
+export default Cart;
