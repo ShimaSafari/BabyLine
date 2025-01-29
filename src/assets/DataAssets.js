@@ -58,6 +58,9 @@ import PhotoShoot_1 from "./images/PhotoShoot_1.png";
 import PhotoShoot_2 from "./images/PhotoShoot_2.png";
 import PhotoShoot_3 from "./images/PhotoShoot_3.png";
 import PhotoShoot_4 from "./images/PhotoShoot_4.png";
+import PhotoShoot_5 from "./images/PhotoShoot_5.png";
+import PhotoShoot_6 from "./images/PhotoShoot_6.png";
+import PhotoShoot_7 from "./images/PhotoShoot_7.png";
 
 //--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
@@ -163,6 +166,9 @@ export const Data = {
   PhotoShoot_2,
   PhotoShoot_3,
   PhotoShoot_4,
+  PhotoShoot_5,
+  PhotoShoot_6,
+  PhotoShoot_7,
 };
 
 export const Products = [
@@ -392,7 +398,7 @@ export const TAGS = [
   "New Born",
   "3-6 Months",
   "6-12 Months",
-  "1-3 Years ",
+  "1-3 Years",
   "3-7 Years",
   "7-12 years",
   "Teen",

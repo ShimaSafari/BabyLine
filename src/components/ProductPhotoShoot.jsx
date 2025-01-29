@@ -11,6 +11,9 @@ const ProductPhotoShoot = () => {
     Data.PhotoShoot_2,
     Data.PhotoShoot_3,
     Data.PhotoShoot_4,
+    Data.PhotoShoot_5,
+    Data.PhotoShoot_5,
+    Data.PhotoShoot_7,
   ];
   const settings = {
     infinite: true,
@@ -33,7 +36,7 @@ const ProductPhotoShoot = () => {
           backgroundRepeat: "no-repeat",
           borderRadius: "24px",
           justifyContent: { xs: "center", md: "initial" },
-          marginTop:"90px"
+          marginTop: "90px",
         }}
       >
         {/* Grid container for content */}
@@ -69,7 +72,7 @@ const ProductPhotoShoot = () => {
               </Typography>
             </Box>
             <Slider {...settings} className="review-slider">
-              {photoShootImages.map((image, index) => (
+              {photoShootImages.slice(0, 4).map((image, index) => (
                 <Box
                   key={index}
                   sx={{ justifyContent: "center", borderRadius: "25px" }}
@@ -80,7 +83,7 @@ const ProductPhotoShoot = () => {
                     style={{
                       height: "200px",
                       objectFit: "contain",
-                      width: "100%",
+                      borderRadius: "25px",
                     }}
                   />
                 </Box>
@@ -97,7 +100,7 @@ const ProductPhotoShoot = () => {
               columnGap: 3,
             }}
           >
-            {photoShootImages.slice(1).map((image, index) => (
+            {photoShootImages.slice(4).map((image, index) => (
               <Box
                 key={index}
                 sx={{ width: { xs: 100, sm: 120, md: 80, lg: 120 } }}
