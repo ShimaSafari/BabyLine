@@ -61,7 +61,8 @@ import PhotoShoot_4 from "./images/PhotoShoot_4.png";
 import PhotoShoot_5 from "./images/PhotoShoot_5.png";
 import PhotoShoot_6 from "./images/PhotoShoot_6.png";
 import PhotoShoot_7 from "./images/PhotoShoot_7.png";
-
+// Cart Page
+import i_CartItems from "./images/i_CartItems.png";
 //--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
 import p_PlushToy from "./images/p_PlushToy.png";
@@ -169,6 +170,7 @@ export const Data = {
   PhotoShoot_5,
   PhotoShoot_6,
   PhotoShoot_7,
+  i_CartItems,
 };
 
 export const Products = [
