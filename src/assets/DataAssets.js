@@ -65,28 +65,43 @@ import PhotoShoot_7 from "./images/PhotoShoot_7.png";
 import i_CartItems from "./images/i_CartItems.png";
 //--------------- img products-------------------------
 import p_BunnySuit from "./images/p_BunnySuit.png";
-import p_PlushToy from "./images/p_PlushToy.png";
+import p_PlushToy_1 from "./images/p_PlushToy_1.png";
+import p_PlushToy_2 from "./images/p_PlushToy_2.png";
+import p_PlushToy_3 from "./images/p_PlushToy_3.png";
+import p_PlushToy_4 from "./images/p_PlushToy_4.png";
+import p_PlushToy_5 from "./images/p_PlushToy_5.png";
+import p_PlushToy_6 from "./images/p_PlushToy_6.png";
 import p_SleevyShirt_1 from "./images/p_SleevyShirt_1.png";
-import p_SleevyShirt_2 from "./images/p_SleevyShirt_2.jpg";
-import p_SleevyShirt_3 from "./images/p_SleevyShirt_3.jpg";
-import p_SleevyShirt_4 from "./images/p_SleevyShirt_4.jpg";
-import p_SleevyShirt_5 from "./images/p_SleevyShirt_5.jpg";
-import p_SleevyShirt_6 from "./images/p_SleevyShirt_6.jpg";
+import p_SleevyShirt_2 from "./images/p_SleevyShirt_2.png";
+import p_SleevyShirt_3 from "./images/p_SleevyShirt_3.png";
+import p_SleevyShirt_4 from "./images/p_SleevyShirt_4.png";
+import p_SleevyShirt_5 from "./images/p_SleevyShirt_5.png";
+import p_SleevyShirt_6 from "./images/p_SleevyShirt_6.png";
 import p_PlushTeddy_1 from "./images/p_PlushTeddy_1.png";
-import p_PlushTeddy_2 from "./images/p_PlushTeddy_2.jpg";
-import p_PlushTeddy_3 from "./images/p_PlushTeddy_3.jpg";
-import p_PlushTeddy_4 from "./images/p_PlushTeddy_4.jpg";
-import p_PlushTeddy_5 from "./images/p_PlushTeddy_5.jpg";
-import p_PlushTeddy_6 from "./images/p_PlushTeddy_6.jpg";
+import p_PlushTeddy_2 from "./images/p_PlushTeddy_2.png";
+import p_PlushTeddy_3 from "./images/p_PlushTeddy_3.png";
+import p_PlushTeddy_4 from "./images/p_PlushTeddy_4.png";
+import p_PlushTeddy_5 from "./images/p_PlushTeddy_5.png";
+import p_PlushTeddy_6 from "./images/p_PlushTeddy_6.png";
 import p_CareCarry from "./images/p_CareCarry.png";
 import p_FullSleevTshirt_1 from "./images/p_FullSleevTshirt_1.png";
-import p_FullSleevTshirt_2 from "./images/p_FullSleevTshirt_2.jpg";
-import p_FullSleevTshirt_3 from "./images/p_FullSleevTshirt_3.jpg";
-import p_FullSleevTshirt_4 from "./images/p_FullSleevTshirt_4.jpg";
-import p_FullSleevTshirt_5 from "./images/p_FullSleevTshirt_5.jpg";
-import p_FullSleevTshirt_6 from "./images/p_FullSleevTshirt_6.jpg";
-import p_DisneyBag from "./images/p_DisneyBag.png";
-import p_SleevyTshtx from "./images/p_SleevyTshtx.png";
+import p_FullSleevTshirt_2 from "./images/p_FullSleevTshirt_2.png";
+import p_FullSleevTshirt_3 from "./images/p_FullSleevTshirt_3.png";
+import p_FullSleevTshirt_4 from "./images/p_FullSleevTshirt_4.png";
+import p_FullSleevTshirt_5 from "./images/p_FullSleevTshirt_5.png";
+import p_FullSleevTshirt_6 from "./images/p_FullSleevTshirt_6.png";
+import p_DisneyBag_1 from "./images/p_DisneyBag_1.png";
+import p_DisneyBag_2 from "./images/p_DisneyBag_2.png";
+import p_DisneyBag_3 from "./images/p_DisneyBag_3.png";
+import p_DisneyBag_4 from "./images/p_DisneyBag_4.png";
+import p_DisneyBag_5 from "./images/p_DisneyBag_5.png";
+import p_DisneyBag_6 from "./images/p_DisneyBag_6.png";
+import p_SleevyTshtx_1 from "./images/p_SleevyTshtx_1.png";
+import p_SleevyTshtx_2 from "./images/p_SleevyTshtx_2.png";
+import p_SleevyTshtx_3 from "./images/p_SleevyTshtx_3.png";
+import p_SleevyTshtx_4 from "./images/p_SleevyTshtx_4.png";
+import p_SleevyTshtx_5 from "./images/p_SleevyTshtx_5.png";
+import p_SleevyTshtx_6 from "./images/p_SleevyTshtx_6.png";
 import p_BabySeatCar from "./images/p_BabySeatCar.png";
 import p_SetyJacks from "./images/p_SetyJacks.png";
 import p_BabyS1Pro from "./images/p_BabyS1Pro.png";
@@ -95,7 +110,12 @@ import p_EasterBunny from "./images/p_EasterBunny.png";
 import p_BabySeatS2 from "./images/p_BabySeatS2.png";
 export const Data = {
   p_BunnySuit,
-  p_PlushToy,
+  p_PlushToy_1,
+  p_PlushToy_2,
+  p_PlushToy_3,
+  p_PlushToy_4,
+  p_PlushToy_5,
+  p_PlushToy_6,
   p_SleevyShirt_1,
   p_SleevyShirt_2,
   p_SleevyShirt_3,
@@ -109,8 +129,18 @@ export const Data = {
   p_PlushTeddy_5,
   p_PlushTeddy_6,
   p_CareCarry,
-  p_DisneyBag,
-  p_SleevyTshtx,
+  p_DisneyBag_1,
+  p_DisneyBag_2,
+  p_DisneyBag_3,
+  p_DisneyBag_4,
+  p_DisneyBag_5,
+  p_DisneyBag_6,
+  p_SleevyTshtx_1,
+  p_SleevyTshtx_2,
+  p_SleevyTshtx_3,
+  p_SleevyTshtx_4,
+  p_SleevyTshtx_5,
+  p_SleevyTshtx_6,
   p_BabySeatCar,
   p_SetyJacks,
   p_BabyS1Pro,
@@ -215,7 +245,14 @@ export const Products = [
     price: 1949,
     discountPrice: 1300,
     discountPercent: 0,
-    image: [p_PlushToy],
+    image: [
+      p_PlushToy_1,
+      p_PlushToy_2,
+      p_PlushToy_3,
+      p_PlushToy_4,
+      p_PlushToy_5,
+      p_PlushToy_6,
+    ],
     category: "Party Shop & Gift Sets",
     sizes: ["S"],
     bestseller: true,
@@ -281,7 +318,14 @@ export const Products = [
     price: 2999,
     discountPrice: 1999,
     discountPercent: 0,
-    image: [p_DisneyBag],
+    image: [
+      p_DisneyBag_1,
+      p_DisneyBag_2,
+      p_DisneyBag_3,
+      p_DisneyBag_4,
+      p_DisneyBag_5,
+      p_DisneyBag_6,
+    ],
     category: "Party Shop & Gift Sets",
     sizes: ["S"],
     bestseller: false,
@@ -294,7 +338,14 @@ export const Products = [
     price: 2300,
     discountPrice: 1500,
     discountPercent: 0,
-    image: [p_SleevyTshtx],
+    image: [
+      p_SleevyTshtx_1,
+      p_SleevyTshtx_2,
+      p_SleevyTshtx_3,
+      p_SleevyTshtx_4,
+      p_SleevyTshtx_5,
+      p_SleevyTshtx_6,
+    ],
     category: "Toddlers Clothing & Accessories",
     sizes: ["S", "M", "L"],
     bestseller: false,
