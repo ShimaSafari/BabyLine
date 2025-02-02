@@ -112,10 +112,25 @@ import p_SleevyTshtx_3 from "./images/p_SleevyTshtx_3.png";
 import p_SleevyTshtx_4 from "./images/p_SleevyTshtx_4.png";
 import p_SleevyTshtx_5 from "./images/p_SleevyTshtx_5.png";
 import p_SleevyTshtx_6 from "./images/p_SleevyTshtx_6.png";
-import p_BabySeatCar from "./images/p_BabySeatCar.png";
-import p_SetyJacks from "./images/p_SetyJacks.png";
+import p_BabySeatCar_1 from "./images/p_BabySeatCar_1.png";
+import p_BabySeatCar_2 from "./images/p_BabySeatCar_2.png";
+import p_BabySeatCar_3 from "./images/p_BabySeatCar_3.png";
+import p_BabySeatCar_4 from "./images/p_BabySeatCar_4.png";
+import p_BabySeatCar_5 from "./images/p_BabySeatCar_5.png";
+import p_BabySeatCar_6 from "./images/p_BabySeatCar_6.png";
+import p_SetyJacks_1 from "./images/p_SetyJacks_1.png";
+import p_SetyJacks_2 from "./images/p_SetyJacks_2.png";
+import p_SetyJacks_3 from "./images/p_SetyJacks_3.png";
+import p_SetyJacks_4 from "./images/p_SetyJacks_4.png";
+import p_SetyJacks_5 from "./images/p_SetyJacks_5.png";
+import p_SetyJacks_6 from "./images/p_SetyJacks_6.png";
 import p_BabyS1Pro from "./images/p_BabyS1Pro.png";
-import p_BuildingBlocks from "./images/p_BuildingBlocks.png";
+import p_BuildingBlocks_1 from "./images/p_BuildingBlocks_1.png";
+import p_BuildingBlocks_2 from "./images/p_BuildingBlocks_2.png";
+import p_BuildingBlocks_3 from "./images/p_BuildingBlocks_3.png";
+import p_BuildingBlocks_4 from "./images/p_BuildingBlocks_4.png";
+import p_BuildingBlocks_5 from "./images/p_BuildingBlocks_5.png";
+import p_BuildingBlocks_6 from "./images/p_BuildingBlocks_6.png";
 import p_EasterBunny_1 from "./images/p_EasterBunny_1.png";
 import p_EasterBunny_2 from "./images/p_EasterBunny_2.png";
 import p_EasterBunny_3 from "./images/p_EasterBunny_3.png";
@@ -166,10 +181,25 @@ export const Data = {
   p_SleevyTshtx_4,
   p_SleevyTshtx_5,
   p_SleevyTshtx_6,
-  p_BabySeatCar,
-  p_SetyJacks,
+  p_BabySeatCar_1,
+  p_BabySeatCar_2,
+  p_BabySeatCar_3,
+  p_BabySeatCar_4,
+  p_BabySeatCar_5,
+  p_BabySeatCar_6,
+  p_SetyJacks_1,
+  p_SetyJacks_2,
+  p_SetyJacks_3,
+  p_SetyJacks_4,
+  p_SetyJacks_5,
+  p_SetyJacks_6,
   p_BabyS1Pro,
-  p_BuildingBlocks,
+  p_BuildingBlocks_1,
+  p_BuildingBlocks_2,
+  p_BuildingBlocks_3,
+  p_BuildingBlocks_4,
+  p_BuildingBlocks_5,
+  p_BuildingBlocks_6,
   p_FullSleevTshirt_1,
   p_FullSleevTshirt_2,
   p_FullSleevTshirt_3,
@@ -402,7 +432,14 @@ export const Products = [
     price: 4600,
     discountPrice: 3500,
     discountPercent: 0,
-    image: [p_BabySeatCar],
+    image: [
+      p_BabySeatCar_1,
+      p_BabySeatCar_2,
+      p_BabySeatCar_3,
+      p_BabySeatCar_4,
+      p_BabySeatCar_5,
+      p_BabySeatCar_6,
+    ],
     category: "Strollers Car Seats & Ride-Ons",
     sizes: ["M", "L"],
     bestseller: false,
@@ -415,7 +452,14 @@ export const Products = [
     price: 2599,
     discountPrice: 1899,
     discountPercent: 0,
-    image: [p_SetyJacks],
+    image: [
+      p_SetyJacks_1,
+      p_SetyJacks_2,
+      p_SetyJacks_3,
+      p_SetyJacks_4,
+      p_SetyJacks_5,
+      p_SetyJacks_6,
+    ],
     category: "Newborn & Baby Care Shop",
     sizes: ["S", "M", "L"],
     bestseller: false,
@@ -441,7 +485,14 @@ export const Products = [
     price: 1399,
     discountPrice: 799,
     discountPercent: 0,
-    image: [p_BuildingBlocks],
+    image: [
+      p_BuildingBlocks_1,
+      p_BuildingBlocks_2,
+      p_BuildingBlocks_3,
+      p_BuildingBlocks_4,
+      p_BuildingBlocks_5,
+      p_BuildingBlocks_6,
+    ],
     category: "Toys Books & Games",
     sizes: ["S", "M", "L"],
     bestseller: false,
