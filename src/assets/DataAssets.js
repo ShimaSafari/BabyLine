@@ -64,7 +64,12 @@ import PhotoShoot_7 from "./images/PhotoShoot_7.png";
 // Cart Page
 import i_CartItems from "./images/i_CartItems.png";
 //--------------- img products-------------------------
-import p_BunnySuit from "./images/p_BunnySuit.png";
+import p_BunnySuit_1 from "./images/p_BunnySuit_1.png";
+import p_BunnySuit_2 from "./images/p_BunnySuit_2.png";
+import p_BunnySuit_3 from "./images/p_BunnySuit_3.png";
+import p_BunnySuit_4 from "./images/p_BunnySuit_4.png";
+import p_BunnySuit_5 from "./images/p_BunnySuit_5.png";
+import p_BunnySuit_6 from "./images/p_BunnySuit_6.png";
 import p_PlushToy_1 from "./images/p_PlushToy_1.png";
 import p_PlushToy_2 from "./images/p_PlushToy_2.png";
 import p_PlushToy_3 from "./images/p_PlushToy_3.png";
@@ -83,7 +88,12 @@ import p_PlushTeddy_3 from "./images/p_PlushTeddy_3.png";
 import p_PlushTeddy_4 from "./images/p_PlushTeddy_4.png";
 import p_PlushTeddy_5 from "./images/p_PlushTeddy_5.png";
 import p_PlushTeddy_6 from "./images/p_PlushTeddy_6.png";
-import p_CareCarry from "./images/p_CareCarry.png";
+import p_CareCarry_1 from "./images/p_CareCarry_1.png";
+import p_CareCarry_2 from "./images/p_CareCarry_2.png";
+import p_CareCarry_3 from "./images/p_CareCarry_3.png";
+import p_CareCarry_4 from "./images/p_CareCarry_4.png";
+import p_CareCarry_5 from "./images/p_CareCarry_5.png";
+import p_CareCarry_6 from "./images/p_CareCarry_6.png";
 import p_FullSleevTshirt_1 from "./images/p_FullSleevTshirt_1.png";
 import p_FullSleevTshirt_2 from "./images/p_FullSleevTshirt_2.png";
 import p_FullSleevTshirt_3 from "./images/p_FullSleevTshirt_3.png";
@@ -106,10 +116,20 @@ import p_BabySeatCar from "./images/p_BabySeatCar.png";
 import p_SetyJacks from "./images/p_SetyJacks.png";
 import p_BabyS1Pro from "./images/p_BabyS1Pro.png";
 import p_BuildingBlocks from "./images/p_BuildingBlocks.png";
-import p_EasterBunny from "./images/p_EasterBunny.png";
+import p_EasterBunny_1 from "./images/p_EasterBunny_1.png";
+import p_EasterBunny_2 from "./images/p_EasterBunny_2.png";
+import p_EasterBunny_3 from "./images/p_EasterBunny_3.png";
+import p_EasterBunny_4 from "./images/p_EasterBunny_4.png";
+import p_EasterBunny_5 from "./images/p_EasterBunny_5.png";
+import p_EasterBunny_6 from "./images/p_EasterBunny_6.png";
 import p_BabySeatS2 from "./images/p_BabySeatS2.png";
 export const Data = {
-  p_BunnySuit,
+  p_BunnySuit_1,
+  p_BunnySuit_2,
+  p_BunnySuit_3,
+  p_BunnySuit_4,
+  p_BunnySuit_5,
+  p_BunnySuit_6,
   p_PlushToy_1,
   p_PlushToy_2,
   p_PlushToy_3,
@@ -128,7 +148,12 @@ export const Data = {
   p_PlushTeddy_4,
   p_PlushTeddy_5,
   p_PlushTeddy_6,
-  p_CareCarry,
+  p_CareCarry_1,
+  p_CareCarry_2,
+  p_CareCarry_3,
+  p_CareCarry_4,
+  p_CareCarry_5,
+  p_CareCarry_6,
   p_DisneyBag_1,
   p_DisneyBag_2,
   p_DisneyBag_3,
@@ -151,7 +176,12 @@ export const Data = {
   p_FullSleevTshirt_4,
   p_FullSleevTshirt_5,
   p_FullSleevTshirt_6,
-  p_EasterBunny,
+  p_EasterBunny_1,
+  p_EasterBunny_2,
+  p_EasterBunny_3,
+  p_EasterBunny_4,
+  p_EasterBunny_5,
+  p_EasterBunny_6,
   p_BabySeatS2,
   Bgline,
   Herobg,
@@ -232,7 +262,14 @@ export const Products = [
     price: 1800,
     discountPrice: 1499,
     discountPercent: 0,
-    image: [p_BunnySuit],
+    image: [
+      p_BunnySuit_1,
+      p_BunnySuit_2,
+      p_BunnySuit_3,
+      p_BunnySuit_4,
+      p_BunnySuit_5,
+      p_BunnySuit_6,
+    ],
     category: "Newborn & Baby Care Shop",
     sizes: ["S", "M", "L"],
     bestseller: true,
@@ -285,9 +322,16 @@ export const Products = [
     price: 4899,
     discountPrice: 3699,
     discountPercent: 0,
-    image: [p_CareCarry],
+    image: [
+      p_CareCarry_1,
+      p_CareCarry_2,
+      p_CareCarry_3,
+      p_CareCarry_4,
+      p_CareCarry_5,
+      p_CareCarry_6,
+    ],
     category: "Strollers Car Seats & Ride-Ons",
-    sizes: ["S", "M", "L"],
+    sizes: ["L"],
     bestseller: true,
   },
   {
@@ -410,7 +454,14 @@ export const Products = [
     price: 2300,
     discountPrice: 1500,
     discountPercent: 0,
-    image: [p_EasterBunny],
+    image: [
+      p_EasterBunny_1,
+      p_EasterBunny_2,
+      p_EasterBunny_3,
+      p_EasterBunny_4,
+      p_EasterBunny_5,
+      p_EasterBunny_6,
+    ],
     category: "Toys Books & Games",
     sizes: ["S", "M"],
     bestseller: false,
