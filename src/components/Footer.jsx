@@ -183,7 +183,10 @@ const Footer = () => {
               </Typography>
             </Grid>
             <Typography variant="body2" sx={{ fontSize: "24px" }}>
-              23 Kinfra Park Calicut - 676056 +91 8086 5000 23{" "}
+              Mashhad, Razavi Khorasan Province, Iran
+            </Typography>
+            <Typography variant="body2" sx={{ fontSize: "24px" }}>
+              +98 915 1234567
             </Typography>
           </Grid>
         </Grid>
@@ -195,7 +198,7 @@ const Footer = () => {
           paddingY: "21px",
           display: "flex",
           justifyContent: "space-between",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "column", sm: "row" },
           gap: 2,
         }}
       >
@@ -203,9 +206,11 @@ const Footer = () => {
           <Typography variant="body2">All rights reserved</Typography>
         </Grid>
         <Grid sx={{ display: "flex", gap: 1 }}>
-          <Typography variant="body2">Designed By S.S</Typography>
+          <Typography variant="body2">S.S By</Typography>
           <HeartIcon />
-          <Typography variant="body2">Copyright © {new Date().getFullYear()}</Typography>
+          <Typography variant="body2">
+            Copyright © {new Date().getFullYear()}
+          </Typography>
         </Grid>
       </Grid>
     </Grid>

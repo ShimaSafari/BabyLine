@@ -31,7 +31,7 @@ const Offers = () => {
           }}
         >
           <img
-            src={Data.Group_offer1}
+            src={Data.Offers_1}
             style={{
               width: "100%",
               maxWidth: "600px",
@@ -39,7 +39,7 @@ const Offers = () => {
             }}
           />
           <img
-            src={Data.Group_offer2}
+            src={Data.Offers_2}
             style={{
               width: "100%",
               maxWidth: "600px",
@@ -47,7 +47,7 @@ const Offers = () => {
             }}
           />
           <img
-            src={Data.Group_offer3}
+            src={Data.Offers_3}
             style={{
               width: "100%",
               maxWidth: "600px",

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
 import About from "./pages/About";
@@ -13,6 +13,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Product from "./pages/Product";
 const App = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <>
       <Navbar />

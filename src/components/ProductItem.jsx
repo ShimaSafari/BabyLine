@@ -57,7 +57,7 @@ const ProductItem = ({
               Sale {discountPercent}%
             </Typography>
           </Box>
-          <Link to={`/product/${id}`} sx={{}}>
+          <Link to={`/product/${id}`}>
             <CardMedia
               sx={{
                 height: "90%",
@@ -102,6 +102,7 @@ const ProductItem = ({
         </CardContent>
         <CardActions sx={{ justifyContent: "center", paddingTop: 0 }}>
           <Button
+            href={`/product/${id}`}
             variant="contained"
             color="warning"
             disableElevation

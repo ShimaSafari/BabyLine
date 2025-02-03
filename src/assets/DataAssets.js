@@ -1,10 +1,9 @@
 // img Home Page
 // img in Hero Component
 import Bgline from "./images/Bg-lineHero.png";
-import Herobg from "./images/Bg-main.svg";
-// img in HeroGroup Component
-import ToddlerShop from "./images/GroupToddlerShop.svg";
-import BabyShop from "./images/GroupBabyShop.svg";
+import Herobg from "./images/Bg-Hero.png";
+import ToddlerShop from "./images/GroupToddlerShop.png";
+import BabyShop from "./images/GroupBabyShop.png";
 // img in Title Component
 import Left from "./images/i_left.png";
 import Right from "./images/i_right.png";
@@ -12,9 +11,9 @@ import Right from "./images/i_right.png";
 import Bgline_popular from "./images/Bg-popularproduct.png";
 // img in Offers Component
 import Bg_Offers from "./images/Bg_Offers.png";
-import Group_offer1 from "./images/Group_offer1.svg";
-import Group_offer2 from "./images/Group_offer2.svg";
-import Group_offer3 from "./images/Group_offer3.svg";
+import Offers_1 from "./images/Offers_1.png";
+import Offers_2 from "./images/Offers_2.png";
+import Offers_3 from "./images/Offers_3.png";
 import mouse from "./images/i_mouse.png";
 // img in Footer Component
 import Bg_Footer from "./images/Bg_Footerdash.png";
@@ -124,7 +123,12 @@ import p_SetyJacks_3 from "./images/p_SetyJacks_3.png";
 import p_SetyJacks_4 from "./images/p_SetyJacks_4.png";
 import p_SetyJacks_5 from "./images/p_SetyJacks_5.png";
 import p_SetyJacks_6 from "./images/p_SetyJacks_6.png";
-import p_BabyS1Pro from "./images/p_BabyS1Pro.png";
+import p_BabyS1Pro_1 from "./images/p_BabyS1Pro_1.png";
+import p_BabyS1Pro_2 from "./images/p_BabyS1Pro_2.png";
+import p_BabyS1Pro_3 from "./images/p_BabyS1Pro_3.png";
+import p_BabyS1Pro_4 from "./images/p_BabyS1Pro_4.png";
+import p_BabyS1Pro_5 from "./images/p_BabyS1Pro_5.png";
+import p_BabyS1Pro_6 from "./images/p_BabyS1Pro_6.png";
 import p_BuildingBlocks_1 from "./images/p_BuildingBlocks_1.png";
 import p_BuildingBlocks_2 from "./images/p_BuildingBlocks_2.png";
 import p_BuildingBlocks_3 from "./images/p_BuildingBlocks_3.png";
@@ -137,7 +141,12 @@ import p_EasterBunny_3 from "./images/p_EasterBunny_3.png";
 import p_EasterBunny_4 from "./images/p_EasterBunny_4.png";
 import p_EasterBunny_5 from "./images/p_EasterBunny_5.png";
 import p_EasterBunny_6 from "./images/p_EasterBunny_6.png";
-import p_BabySeatS2 from "./images/p_BabySeatS2.png";
+import p_BabySeatS2_1 from "./images/p_BabySeatS2_1.png";
+import p_BabySeatS2_2 from "./images/p_BabySeatS2_2.png";
+import p_BabySeatS2_3 from "./images/p_BabySeatS2_3.png";
+import p_BabySeatS2_4 from "./images/p_BabySeatS2_4.png";
+import p_BabySeatS2_5 from "./images/p_BabySeatS2_5.png";
+import p_BabySeatS2_6 from "./images/p_BabySeatS2_6.png";
 export const Data = {
   p_BunnySuit_1,
   p_BunnySuit_2,
@@ -193,7 +202,12 @@ export const Data = {
   p_SetyJacks_4,
   p_SetyJacks_5,
   p_SetyJacks_6,
-  p_BabyS1Pro,
+  p_BabyS1Pro_1,
+  p_BabyS1Pro_2,
+  p_BabyS1Pro_3,
+  p_BabyS1Pro_4,
+  p_BabyS1Pro_5,
+  p_BabyS1Pro_6,
   p_BuildingBlocks_1,
   p_BuildingBlocks_2,
   p_BuildingBlocks_3,
@@ -212,7 +226,12 @@ export const Data = {
   p_EasterBunny_4,
   p_EasterBunny_5,
   p_EasterBunny_6,
-  p_BabySeatS2,
+  p_BabySeatS2_1,
+  p_BabySeatS2_2,
+  p_BabySeatS2_3,
+  p_BabySeatS2_4,
+  p_BabySeatS2_5,
+  p_BabySeatS2_6,
   Bgline,
   Herobg,
   ToddlerShop,
@@ -221,9 +240,9 @@ export const Data = {
   Right,
   Bgline_popular,
   Bg_Offers,
-  Group_offer1,
-  Group_offer2,
-  Group_offer3,
+  Offers_1,
+  Offers_2,
+  Offers_3,
   mouse,
   Bg_Footer,
   Footer_brand1,
@@ -472,9 +491,16 @@ export const Products = [
     price: 5699,
     discountPrice: 4899,
     discountPercent: 0,
-    image: [p_BabyS1Pro],
+    image: [
+      p_BabyS1Pro_1,
+      p_BabyS1Pro_2,
+      p_BabyS1Pro_3,
+      p_BabyS1Pro_4,
+      p_BabyS1Pro_5,
+      p_BabyS1Pro_6,
+    ],
     category: "Strollers Car Seats & Ride-Ons",
-    sizes: ["S", "M", "L"],
+    sizes: ["M", "L"],
     bestseller: false,
   },
   {
@@ -525,9 +551,16 @@ export const Products = [
     price: 8999,
     discountPrice: 6799,
     discountPercent: 0,
-    image: [p_BabySeatS2],
+    image: [
+      p_BabySeatS2_1,
+      p_BabySeatS2_2,
+      p_BabySeatS2_3,
+      p_BabySeatS2_4,
+      p_BabySeatS2_5,
+      p_BabySeatS2_6,
+    ],
     category: "Strollers Car Seats & Ride-Ons",
-    sizes: ["S", "M", "L"],
+    sizes: ["M", "L"],
     bestseller: false,
   },
 ];

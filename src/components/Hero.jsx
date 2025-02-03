@@ -2,6 +2,7 @@ import React from "react";
 import { Data } from "/src/assets/DataAssets";
 import Grid from "@mui/material/Grid2";
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -10,11 +11,9 @@ const Hero = () => {
       sx={{
         width: "100%",
         paddingX: { md: "70px", sm: "10px" },
-        // height:"730px",
         backgroundImage: `url(${Data.Bgline})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
+        backgroundPosition: "left",
       }}
     >
       {/* Grid for hero banner background */}
@@ -24,9 +23,9 @@ const Hero = () => {
           height: "660px",
           backgroundImage: `url(${Data.Herobg})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "left",
           backgroundRepeat: "no-repeat",
-          borderRadius: { md: "50px", sm: "30px" },
+          borderRadius: "50px",
           display: "flex",
           flexWrap: "wrap",
           flexDirection: "row",
@@ -109,6 +108,53 @@ const Hero = () => {
               </Typography>
             </Grid>
           </Grid>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        spacing={4}
+        sx={{
+          marginTop: "50px",
+          marginX: "10px",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
+        <Grid
+          size={{ md: 6, xs: 12 }}
+          sx={{
+            display: "flex",
+            justifyContent: { md: "start", xs: "center" },
+          }}
+        >
+          <Link to={"/store"}>
+            <img
+              src={Data.ToddlerShop}
+              alt="Toddler Shop"
+              style={{
+                width: "100%",
+                maxWidth: "600px",
+                height: "auto",
+              }}
+            />
+          </Link>
+        </Grid>
+        <Grid
+          size={{ md: 6, xs: 12 }}
+          sx={{ display: "flex", justifyContent: { md: "end", xs: "center" } }}
+        >
+          <Link to={"/store"}>
+            <img
+              src={Data.BabyShop}
+              alt="Baby Shop"
+              style={{
+                width: "100%",
+                maxWidth: "600px",
+                height: "auto",
+              }}
+            />
+          </Link>
         </Grid>
       </Grid>
     </Grid>
