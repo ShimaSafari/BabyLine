@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import { Products } from "../assets/DataAssets";
 import { Categories } from "../assets/DataAssets";
 import { TAGS } from "../assets/DataAssets";
+import { useNavigate } from "react-router-dom";
 
 export const ShopContext = createContext();
 
@@ -15,6 +16,7 @@ const ShopContextProvider = (props) => {
     message: "",
     severity: "info",
   });
+  const navigate = useNavigate();
 
   const addToCart = async (itemId, size) => {
     if (!size) {
@@ -106,6 +108,7 @@ const ShopContextProvider = (props) => {
     getCartCount,
     updateQuantity,
     getCartAmount,
+    navigate,
   };
   return (
     <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>

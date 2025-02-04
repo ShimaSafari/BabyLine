@@ -6,11 +6,14 @@ import { Box, Typography, IconButton, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import CartTotal from "../components/CartTotal";
+import CartCoupon from "../components/CartCoupon";
+
 const Cart = () => {
-  const { Products, currency, cartItems, updateQuantity } =
+  const { Products, currency, cartItems, updateQuantity, navigate } =
     useContext(ShopContext);
 
   const [cartData, setCartData] = useState([]);
+  const [discount, setDiscount] = useState(0);
 
   useEffect(() => {
     const tempData = [];
@@ -27,6 +30,11 @@ const Cart = () => {
     }
     setCartData(tempData);
   }, [cartItems]);
+
+  const handleApplyCoupon = (discount) => {
+    setDiscount(discount);
+  };
+
   return (
     <Grid
       container
@@ -45,10 +53,10 @@ const Cart = () => {
           width: "100%",
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           gap: 3,
-          paddingX: 3,
-          paddingY: 2,
-          borderBottom: 2,
+          paddingBottom: 2,
+          borderBottom: 3,
           borderColor: "background.paper",
           borderRadius: "30px",
         }}
@@ -73,7 +81,7 @@ const Cart = () => {
             <Grid
               container
               key={index}
-              size={11}
+              size={12}
               sx={{
                 backgroundColor: "background.paper",
                 borderRadius: "24px",
@@ -91,7 +99,7 @@ const Cart = () => {
                 sx={{ borderRadius: "15px", justifyContent: "center" }}
               >
                 <img
-                  src={productData.image[0]}
+                  src={productData.image[1]}
                   alt={productData.name}
                   style={{
                     width: "150px",
@@ -103,7 +111,7 @@ const Cart = () => {
               {/* 2- grid for product info */}
               <Grid
                 container
-                size={{ xs: 11, sm: 6, md: "auto" }}
+                size={{ xs: 11, sm: "auto" }}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
@@ -170,15 +178,6 @@ const Cart = () => {
                   <AddIcon />
                 </IconButton>
                 <Typography
-                  onChange={(e) =>
-                    e.target.value === "" || e.target.value === "0"
-                      ? null
-                      : updateQuantity(
-                          item.id,
-                          item.size,
-                          Number(e.target.value)
-                        )
-                  }
                   component="span"
                   sx={{
                     backgroundColor: "#F8EFEF",
@@ -207,7 +206,35 @@ const Cart = () => {
         })}
       </Grid>
       {/* Component for Total Amount */}
-      {cartData.length > 0 && <CartTotal />}
+      {cartData.length > 0 ? (
+        <Grid size={{ xs: 12, md: 9, lg: 7 }}>
+          <CartCoupon onApplyCoupon={handleApplyCoupon} />
+          <CartTotal discount={discount} />
+          <Button
+            variant="contained"
+            disableRipple
+            disableElevation
+            onClick={() => navigate("/place-order")}
+            sx={{
+              backgroundColor: "primary.main",
+              textTransform: "none",
+              borderRadius: "25px",
+              padding: "10px 40px",
+              marginY: 3,
+              alignSelf: "start",
+              "&:hover": {
+                backgroundColor: "warning.main",
+              },
+            }}
+          >
+            Check Out
+          </Button>
+        </Grid>
+      ) : (
+        <Typography variant="body2" fontSize={30} sx={{ width: "100%" }}>
+          No Items in Cart
+        </Typography>
+      )}
     </Grid>
   );
 };
