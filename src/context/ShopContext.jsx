@@ -16,6 +16,7 @@ const ShopContextProvider = (props) => {
     message: "",
     severity: "info",
   });
+  const [discount, setDiscount] = useState(0);
   const navigate = useNavigate();
 
   const addToCart = async (itemId, size) => {
@@ -87,6 +88,10 @@ const ShopContextProvider = (props) => {
     return totalAmount;
   };
 
+  const handleApplyCoupon = (discount) => {
+    setDiscount(discount);
+  };
+
   const updateQuantity = async (itemId, size, quantity) => {
     let cartData = structuredClone(cartItems);
     cartData[itemId][size] = quantity;
@@ -108,6 +113,9 @@ const ShopContextProvider = (props) => {
     getCartCount,
     updateQuantity,
     getCartAmount,
+    discount,
+    setDiscount,
+    handleApplyCoupon,
     navigate,
   };
   return (

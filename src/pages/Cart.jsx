@@ -13,7 +13,6 @@ const Cart = () => {
     useContext(ShopContext);
 
   const [cartData, setCartData] = useState([]);
-  const [discount, setDiscount] = useState(0);
 
   useEffect(() => {
     const tempData = [];
@@ -30,10 +29,6 @@ const Cart = () => {
     }
     setCartData(tempData);
   }, [cartItems]);
-
-  const handleApplyCoupon = (discount) => {
-    setDiscount(discount);
-  };
 
   return (
     <Grid
@@ -208,8 +203,8 @@ const Cart = () => {
       {/* Component for Total Amount */}
       {cartData.length > 0 ? (
         <Grid size={{ xs: 12, md: 9, lg: 7 }}>
-          <CartCoupon onApplyCoupon={handleApplyCoupon} />
-          <CartTotal discount={discount} />
+          <CartCoupon  />
+          <CartTotal  />
           <Button
             variant="contained"
             disableRipple

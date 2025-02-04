@@ -3,8 +3,8 @@ import { ShopContext } from "../context/ShopContext";
 import Grid from "@mui/material/Grid2";
 import { Typography } from "@mui/material";
 
-const CartTotal = ({ discount }) => {
-  const { currency, delivery_fee, getCartAmount } = useContext(ShopContext);
+const CartTotal = () => {
+  const { currency, delivery_fee, getCartAmount , discount} = useContext(ShopContext);
 
   const discountedAmount = getCartAmount() * (1 - discount);
 

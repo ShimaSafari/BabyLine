@@ -15,7 +15,7 @@ const ProductItem = ({
   discountPrice,
   discountPercent,
 }) => {
-  const { currency } = useContext(ShopContext);
+  const { currency, navigate } = useContext(ShopContext);
   return (
     <Grid container sx={{ justifyContent: "center" }}>
       <Card
@@ -102,7 +102,7 @@ const ProductItem = ({
         </CardContent>
         <CardActions sx={{ justifyContent: "center", paddingTop: 0 }}>
           <Button
-            href={`/product/${id}`}
+            onClick={() => navigate(`/product/${id}`)}
             variant="contained"
             color="warning"
             disableElevation

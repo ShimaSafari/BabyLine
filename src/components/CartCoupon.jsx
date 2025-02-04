@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Grid from "@mui/material/Grid2";
 import { Box, Button, styled, Typography, TextField } from "@mui/material";
+import { ShopContext } from "../context/ShopContext";
 
-const CartCoupon = ({ onApplyCoupon }) => {
+const CartCoupon = () => {
   const [coupon, setCoupon] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
+  const { handleApplyCoupon } = useContext(ShopContext);
 
-  const handleApplyCoupon = () => {
+  const handleApplyText = () => {
     const discount = coupon === "DISCOUNT20" ? 0.2 : 0;
     if (discount > 0) {
       setCouponApplied(true);
@@ -30,6 +32,7 @@ const CartCoupon = ({ onApplyCoupon }) => {
     },
     "& .MuiOutlinedInput-notchedOutline": {
       border: "2px dashed #00000080",
+      borderRadius: "15px",
     },
   }));
 
@@ -54,7 +57,7 @@ const CartCoupon = ({ onApplyCoupon }) => {
           variant="contained"
           disableRipple
           disableElevation
-          onClick={handleApplyCoupon}
+          onClick={handleApplyText}
           disabled={couponApplied}
           sx={{
             backgroundColor: "#E2666694",
