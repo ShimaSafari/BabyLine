@@ -14,12 +14,12 @@ import {
   Radio,
 } from "@mui/material";
 import CartTotal from "../components/CartTotal";
-const PlaceOrder = () => {
+const CheckOut = () => {
   const { navigate } = useContext(ShopContext);
+
   const TextFieldDelively = styled(TextField)(({ theme }) => ({
     backgroundColor: theme.palette.background.paper,
     borderRadius: "15px",
-
     "& .MuiInputBase-input": {
       color: theme.palette.primary.main,
       fontSize: 18,
@@ -166,7 +166,7 @@ const PlaceOrder = () => {
           <Box sx={{ display: "flex", justifyContent: "end" }}>
             <Button
               variant="contained"
-              onClick={() => navigate("/orders")}
+              onClick={() => navigate("/payment")}
               disableRipple
               disableElevation
               sx={{
@@ -179,7 +179,7 @@ const PlaceOrder = () => {
                 },
               }}
             >
-              Place Order
+              Pay Now
             </Button>
           </Box>
         </Grid>
@@ -188,4 +188,4 @@ const PlaceOrder = () => {
   );
 };
 
-export default PlaceOrder;
+export default CheckOut;

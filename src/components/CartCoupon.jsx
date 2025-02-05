@@ -6,17 +6,11 @@ import { ShopContext } from "../context/ShopContext";
 const CartCoupon = () => {
   const [coupon, setCoupon] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
-  const { handleApplyCoupon } = useContext(ShopContext);
+  const { applyDiscount } = useContext(ShopContext);
 
-  const handleApplyText = () => {
-    const discount = coupon === "DISCOUNT20" ? 0.2 : 0;
-    if (discount > 0) {
-      setCouponApplied(true);
-      onApplyCoupon(discount);
-    } else {
-      setCouponApplied(false);
-      onApplyCoupon(0);
-    }
+  const handleApplyCoupon = () => {
+    applyDiscount(coupon);
+    setCouponApplied(true);
   };
 
   const TextFieldCoupon = styled(TextField)(({ theme }) => ({
@@ -32,17 +26,11 @@ const CartCoupon = () => {
     },
     "& .MuiOutlinedInput-notchedOutline": {
       border: "2px dashed #00000080",
-      borderRadius: "15px",
     },
   }));
 
   return (
-    <Grid
-      container
-      columnSpacing={3}
-      rowSpacing={1}
-      sx={{ marginY: 4, alignItems: "center" }}
-    >
+    <Grid container columnSpacing={4} rowSpacing={1} sx={{ marginY: 4 }}>
       <Box>
         <TextFieldCoupon
           id="outlined-basic"
@@ -57,8 +45,7 @@ const CartCoupon = () => {
           variant="contained"
           disableRipple
           disableElevation
-          onClick={handleApplyText}
-          disabled={couponApplied}
+          onClick={handleApplyCoupon}
           sx={{
             backgroundColor: "#E2666694",
             textTransform: "none",
@@ -73,9 +60,11 @@ const CartCoupon = () => {
         </Button>
       </Box>
       {couponApplied && (
-        <Typography color="#0000008C" fontSize={14}>
-          Coupon Applied Successfully!
-        </Typography>
+        <Box>
+          <Typography color="#0000008C" fontSize={{ xs: 18, sm: 20 }}>
+            Coupon Applied Successfully!
+          </Typography>
+        </Box>
       )}
     </Grid>
   );

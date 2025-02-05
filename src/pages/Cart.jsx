@@ -49,6 +49,7 @@ const Cart = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+
           gap: 3,
           paddingBottom: 2,
           borderBottom: 3,
@@ -203,13 +204,13 @@ const Cart = () => {
       {/* Component for Total Amount */}
       {cartData.length > 0 ? (
         <Grid size={{ xs: 12, md: 9, lg: 7 }}>
-          <CartCoupon  />
-          <CartTotal  />
+          <CartCoupon />
+          <CartTotal />
           <Button
             variant="contained"
             disableRipple
             disableElevation
-            onClick={() => navigate("/place-order")}
+            onClick={() => navigate("/checkout")}
             sx={{
               backgroundColor: "primary.main",
               textTransform: "none",

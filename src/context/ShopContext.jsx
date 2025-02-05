@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { Products } from "../assets/DataAssets";
 import { Categories } from "../assets/DataAssets";
 import { TAGS } from "../assets/DataAssets";
@@ -6,17 +6,17 @@ import { useNavigate } from "react-router-dom";
 
 export const ShopContext = createContext();
 
-const ShopContextProvider = (props) => {
+const ShopProvider = ({ children }) => {
   const currency = "$";
   const delivery_fee = 10;
-  const [inputValue, setInputValue] = useState("");
   const [cartItems, setCartItems] = useState({});
+  const [discount, setDiscount] = useState(0);
+  const [inputValue, setInputValue] = useState("");
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
     severity: "info",
   });
-  const [discount, setDiscount] = useState(0);
   const navigate = useNavigate();
 
   const addToCart = async (itemId, size) => {
@@ -97,6 +97,20 @@ const ShopContextProvider = (props) => {
     cartData[itemId][size] = quantity;
     setCartItems(cartData);
   };
+
+  const applyDiscount = (discountCode) => {
+    const discountValue = discountCode === "DISCOUNT10" ? 0.1 : 0;
+    setDiscount(discountValue);
+  };
+
+  const getDiscountedAmount = () => {
+    return getCartAmount() * (1 - discount);
+  };
+
+  const getTotalAmount = () => {
+    return getDiscountedAmount() + delivery_fee;
+  };
+
   const value = {
     Products,
     currency,
@@ -117,10 +131,12 @@ const ShopContextProvider = (props) => {
     setDiscount,
     handleApplyCoupon,
     navigate,
+    applyDiscount,
+    getDiscountedAmount,
+    getTotalAmount,
   };
-  return (
-    <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>
-  );
+
+  return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
 
-export default ShopContextProvider;
+export default ShopProvider;

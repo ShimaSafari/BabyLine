@@ -4,9 +4,11 @@ import Grid from "@mui/material/Grid2";
 import { Typography } from "@mui/material";
 
 const CartTotal = () => {
-  const { currency, delivery_fee, getCartAmount , discount} = useContext(ShopContext);
+  const { currency, delivery_fee, getDiscountedAmount, getTotalAmount } =
+    useContext(ShopContext);
 
-  const discountedAmount = getCartAmount() * (1 - discount);
+  const discountedAmount = getDiscountedAmount();
+  const totalAmount = getTotalAmount();
 
   return (
     <Grid
@@ -24,8 +26,7 @@ const CartTotal = () => {
         Delivery Fee: {currency} {delivery_fee}
       </Typography>
       <Typography fontSize={30}>
-        Total: {currency}{" "}
-        {discountedAmount === 0 ? 0 : discountedAmount + delivery_fee}
+        Total: {currency} {totalAmount.toFixed(2)}
       </Typography>
     </Grid>
   );
