@@ -25,7 +25,7 @@ import Footer_pay1 from "./images/Footer_pay1.svg";
 import Footer_pay2 from "./images/Footer_pay2.svg";
 import Footer_pay3 from "./images/Footer_pay3.svg";
 import Footer_pay4 from "./images/Footer_pay4.svg";
-import i_Dot from "./images/i_DotMenu.png";
+import i_Dot from "./images/i_Dot.png";
 // img in About Page
 // img in AboutHero components
 import Bg_ContactUs from "./images/Bg_ContactUs.png";
