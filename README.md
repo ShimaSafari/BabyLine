@@ -66,9 +66,6 @@ src/
 
 ![Home Page](src/assets/output-image.png)
 
-## 🤝 Contact
-
-For questions or collaboration, reach out via [Contact Page](src/pages/Contact.jsx).
 
 ---
 
