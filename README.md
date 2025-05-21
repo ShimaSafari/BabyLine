@@ -2,6 +2,26 @@
 
 Welcome to **niniBits**, a modern, responsive e-commerce web application built with React, Vite, and Material UI. This project demonstrates advanced front-end development skills, clean architecture, and a focus on user experience.
 
+## 🌐 Live Demo
+
+Check out the live site: [On Vercel](https://babyline-ecommerce-react-mui.vercel.app/)
+
+## 📸 Screenshots
+
+![Home Page](src/assets/LandingPage.png) 
+
+## 📦 Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+2. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+
+
 ## 🚀 Features
 
 - **React + Vite**: Fast, modern development environment with hot module replacement.
@@ -21,52 +41,63 @@ Welcome to **niniBits**, a modern, responsive e-commerce web application built w
 - [Vite](https://vitejs.dev/)
 - [Material UI](https://mui.com/)
 - [React Router](https://reactrouter.com/)
-- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/)
+- [React Slick](https://react-slick.neostack.com/)
 
-## 📁 Project Structure
+## 📁 Folder Structure
 
 ```
-src/
-  assets/         # Images, icons, and static assets
-  components/     # Reusable UI components (Navbar, Footer, ProductItem, etc.)
-  context/        # React Context for global state
-  pages/          # Main pages (Home, Store, About, Contact, Checkout, Payment)
-  theme.js        # Custom Material UI theme
-  App.jsx         # Main app component
-  main.jsx        # Entry point
+📁node_modules
+📁public
+📁src
+    App.jsx
+    main.jsx
+    theme.js
+    📁assets
+        📁images
+        📁icons
+        DataAssets.js
+    📁components
+            Title.jsx
+            Navbar.jsx
+            Footer.jsx
+            ProductInfo.jsx
+            ProductReview.jsx
+            ProductPhotoShoot.jsx
+            PopularProducts.jsx
+            Reviews.jsx
+            SearchProducts.jsx
+            CartTotal.jsx
+            StoreAllProducts.jsx
+            StoreCategory.jsx
+    📁context
+        ShopContext.jsx
+    📁pages
+        📁Home
+        📁Store
+        📁Product
+        📁Cart
+        📁About
+        📁Contact
+    📁services
+        api.js
+    📁utils
+        helpers.js
+    📁data
+        products.js
+    📁tests
+        App.test.jsx
+index.html
+jsconfig.json
+package.json
+package-lock.json
+postcss.config.js
+README.md
+tailwind.config.js
+vite.config.js
 ```
-
-## 🧑‍💻 My Contributions & Skills Demonstrated
-
-- **UI/UX Design**: Crafted a visually appealing and intuitive interface.
-- **State Management**: Used React Context for scalable, maintainable state.
-- **Reusable Components**: Built modular components for rapid development.
-- **Responsive Design**: Ensured mobile-first, cross-device compatibility.
-- **API Integration Ready**: Designed data structures for easy backend integration.
-- **Code Quality**: Enforced with ESLint and Prettier.
-- **Performance**: Optimized asset loading and minimized bundle size.
-- **Accessibility**: Followed best practices for inclusive design.
-
-## 📦 Getting Started
-
-1. **Install dependencies:**
-   ```sh
-   npm install
-   ```
-2. **Run the development server:**
-   ```sh
-   npm run dev
-   ```
-3. **Build for production:**
-   ```sh
-   npm run build
-   ```
-
-## 📸 Screenshots
-
-![Home Page](src/assets/output-image.png)
 
 
 ---
 
-> **niniBits** – Developed with ❤️ by [Shima Safari]
+> **niniBits** – Developed with ❤️ by Shima Safari
