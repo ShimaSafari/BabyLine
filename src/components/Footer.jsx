@@ -203,14 +203,15 @@ const Footer = () => {
         }}
       >
         <Grid>
-          <Typography variant="body2">All rights reserved</Typography>
+          <Typography variant="body2">
+            {" "}
+            &copy; {new Date().getFullYear()}. All rights reserved.
+          </Typography>
         </Grid>
         <Grid sx={{ display: "flex", gap: 1 }}>
-          <Typography variant="body2">S.S By</Typography>
+          <Typography variant="body2">Made with</Typography>
           <HeartIcon />
-          <Typography variant="body2">
-            Copyright © {new Date().getFullYear()}
-          </Typography>
+          <Typography variant="body2">Shima Safari</Typography>
         </Grid>
       </Grid>
     </Grid>
